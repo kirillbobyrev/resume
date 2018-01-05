@@ -5,87 +5,82 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-
-\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}       % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
 
 % moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{classic}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{red}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+%\renewcommand{\familydefault}{\sfdefault}        % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                 % uncomment to suppress automatic page numbering for CVs longer than one page
 
 % character encoding
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+%\usepackage{CJKutf8}                             % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+%\setlength{\hintscolumnwidth}{3cm}               % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}          % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Kirill}{Bobyrev}
-\title{Computer Scientist, Software Enginner}                               % optional, remove / comment the line if not wanted
-\address{Moscow}{Russia}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
-\phone[mobile]{+7~(915)~118~7489}                   % optional, remove / comment
-\email{kirillbobyrev@gmail.com}                               % optional, remove / comment the line if not wanted
-\homepage{omtcvxyz.github.io}                         % optional, remove / comment the line if not wanted
+\title{Computer Scientist}     % optional, remove / comment the line if not wanted
+\address{Moscow}{Russia}{}                        % optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+\phone[mobile]{+7~(915)~118~7489}                 % optional, remove / comment
+\email{kirillbobyrev@gmail.com}                   % optional, remove / comment the line if not wanted
+\homepage{omtcvxyz.github.io}                     % optional, remove / comment the line if not wanted
 
-% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
-%\makeatletter
-%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
-%\makeatother
-%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
-
-% bibliography with mutiple entries
-%\usepackage{multibib}
-%\newcites{book,misc}{{Books},{Others}}
-%----------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 %            content
-%----------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{document}
-%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
-%-----       resume       ---------------------------------------------------------
+%-----       resume       ------------------------------------------------------
 \makecvtitle
 
 \section{Education}
-\cventry{Class of 2019}{B.Sc.}{MIPT}{Moscow}{}{}  % arguments 3 to 6 can be left empty
+  \cventry{Class of 2019}{B.Sc.}{MIPT}{Moscow}{}{}
+
 \section{Experience}
-\cventry{2018}{Software Engineering Intern}{Google}{Munich}{}{Host: Eric Liu\newline
-  Team: C++ Language Tools}
-\cventry{2016}{Software Engineering Intern}{Google}{Munich}{}{Peers: Alexander Kornienko and Manuel Klimek\newline
-Team: C++ Language Tools
-\begin{itemize}%
-\item Significantly improving clang-rename and gaining users
-\item Designing, implementing and maintaining clang-refactor, a Clang-based refactoring tool with Alexander Kornienko (see \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}{\textcolor{blue}{design doc}})
-\item Adding new functionality to clang-tidy, a C++ linter tool
-\end{itemize}}
-\cventry{2015}{Google Summer of Code student}{LLVM Community}{Remote}{}{Mentor: Vassil Vassilev\newline{}%
-Implementing Code Clone Detection tool in Clang Static Analyzer}
-\cventry{2012-2013}{Junior Game Developer}{Subterranean Games}{Remote}{}{Doing simple tasks to support \href{http://store.steampowered.com/app/230190}{\textcolor{blue}{War For the Overworld}} game development}
+  \cventry{2018}{Software Engineering Intern}{Google}{Munich}{}{}
+  \cventry{2016}{Software Engineering
+    Intern}{Google}{Munich}{}{Peers: Alexander Kornienko and Manuel
+    Klimek, Team: C++ Language Tools
+    \begin{itemize}%
+      \item Significantly improving clang-rename and gaining users
+      \item Designing and prototyping
+        \href{https://clang.llvm.org/docs/RefactoringEngine.html}{\textcolor{blue}{clang-refactor}}
+        (see
+        \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}{\textcolor{blue}{design
+        doc}})
+      \item Adding new functionality to clang-tidy, a C++ linter tool
+    \end{itemize}}
+  \cventry{2015}{Google Summer of Code student}{LLVM
+    Community}{Remote}{}{Mentor: Vassil Vassilev\newline{}
+    Implementing Code Clone Detection tool in Clang Static Analyzer}
+  \cventry{2012-2013}{Junior
+    Game Developer}{Subterranean Games}{Remote}{}{Participating in
+    \href{http://store.steampowered.com/app/230190}{\textcolor{blue}{War For the
+    Overworld}} game development}
 
-\subsection{Projects}
-\cventry{2015-Present}{LLVM}{}{}{}{Participating in LLVM-related projects and working on Clang-based C++ tooling including clang-tidy, clang-rename, clang-refactor\newline{}%
-Keywords: C++, Compilers, Static Analysis, LLVM}
-\cventry{2017-Present}{Heathen}{}{}{}{Experimental superoptimizer\newline{}%
-Keywords: Compilers, Superoptimization, LLVM}
-\cventry{2016}{VisARTM}{}{}{}{Implementing Topic Model navigator for \href{https://github.com/bigartm/bigartm}{\textcolor{blue}{BigARTM}} under supervision of Professor K.V. Vorontsov\newline{}%
-Keywords: Python, Flask, Machine Learning, Topic Modeling}
+\section{Projects}
+  \cventry{2015-Present}{LLVM}{}{}{}{Participating in LLVM-related projects and
+    working on Clang-based C++ tooling\newline{}
+    Keywords: C++, Compilers, Language Tools, Static Analysis}
+  \cventry{2018-Present}{Heathen}{}{}{}{Implementing experimental LLVM peephole
+    superoptimizer\newline{}
+    Keywords: C++, Compilers, Superoptimization, LLVM}
+  \cventry{2016}{VisARTM}{}{}{}{Creating
+    \href{https://github.com/bigartm/bigartm}{\textcolor{blue}{BigARTM}}
+    Topic Model navigator under supervision of K.V. Vorontsov\newline{}
+    Keywords: Python, Flask, Machine Learning, Topic Modeling}
 
-% Publications from a BibTeX file without multibib
-%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
-%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\section{Technical Skills}
+  \cvitem{Programming}{C++, Python, Rust, \LaTeX}
+  \cvitem{Software}{Linux, Vim}
+  \cvitem{Libraries}{NumPy, SciPy, Tensorflow}
+
 \nocite{*}
 \bibliographystyle{plain}
-\bibliography{publications}                        % 'publications' is the name of a BibTeX file
-
-% Publications from a BibTeX file using the multibib package
-%\section{Publications}
-%\nocitebook{book1,book2}
-%\bibliographystylebook{plain}
-%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
-%\nocitemisc{misc1,misc2,misc3}
-%\bibliographystylemisc{plain}
-%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+\bibliography{publications}
 
 \end{document}
