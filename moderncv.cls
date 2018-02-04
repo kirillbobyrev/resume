@@ -12,7 +12,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{moderncv}[2013/02/09 v1.3.0 modern curriculum vitae and letter document class]
 
-
 %-------------------------------------------------------------------------------
 %                class options
 %
@@ -239,6 +238,8 @@
 % defines additional personal information (optional)
 % usage: \extrainfo{<text>}
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
+\newcommand*{\github}[1]{\def\@github{#1}}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 
 % colors
 \definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
@@ -265,6 +266,8 @@
 \newcommand*{\faxphonesymbol}{}
 \newcommand*{\emailsymbol}{}
 \newcommand*{\homepagesymbol}{}
+\newcommand*{\githubsymbol}{}
+\newcommand*{\linkedinsymbol}{}
 
 % fonts
 \AtBeginDocument{\normalfont\color{color0}}
@@ -281,7 +284,7 @@
 % usage: \moderncvstyle{<style variant name>}
 \newcommand*{\moderncvstyle}[1]{
   \RequirePackage{moderncvstyle#1}}
-  
+
 % loads a color scheme
 % usage: \moderncvcolor{<color scheme name>}
 \newcommand*{\moderncvcolor}[1]{
@@ -575,8 +578,6 @@
 % usage: \makeletterclosing
 \newcommand*{\makeletterclosing}{}
 
-
 \endinput
-
 
 %% end of file `moderncv.cls'.

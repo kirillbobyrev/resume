@@ -12,7 +12,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{moderncvstyleclassic}[2013/02/09 v1.3.0 modern curriculum vitae and letter style scheme: classic]
 
-
 %-------------------------------------------------------------------------------
 %                required packages
 %-------------------------------------------------------------------------------
@@ -106,7 +105,9 @@
         \ifthenelse{\equal{\@addresscountry}{}}{}{\makenewline\@addresscountry}}%
       \phonesdetails% needed to be pre-rendered as loops and tabulars seem to conflict
       \ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}%
+      \ifthenelse{\isundefined{\@github}}{}{\makenewline\githubsymbol\httplink{github.com/\@github}}%
       \ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
+      \ifthenelse{\isundefined{\@linkedin}}{}{\makenewline\linkedinsymbol\httplink{linkedin.com/in/\@github}}%
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
     \end{tabular}
   }%
@@ -258,7 +259,9 @@
       \collectionloop{phones}{% the key holds the phone type (=symbol command prefix), the item holds the number
         \makenewline\csname\collectionloopkey phonesymbol\endcsname\collectionloopitem}%
       \ifthenelse{\isundefined{\@email}}{}{\makenewline\emailsymbol\emaillink{\@email}}%
+      \ifthenelse{\isundefined{\@github}}{}{\makenewline\githubsymbol\@github}%
       \ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
+      \ifthenelse{\isundefined{\@linkedin}}{}{\makenewline\linkedinsymbol\httplink{linkedin.com/in/\@github}}%
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}}%
     \end{minipage}\\[1em]
   % recipient block
