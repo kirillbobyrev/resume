@@ -1,26 +1,24 @@
-%% start of file `template.tex'.
 %% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
 %
 % This work may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-\documentclass[11pt,a4paper,sans]{moderncv}       % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% possible options include font size ('10pt', '11pt' and '12pt'), paper size
+% ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
+% 'landscape') and font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
-\moderncvstyle{classic}                           % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{red}                               % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-%\renewcommand{\familydefault}{\sfdefault}        % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
-%\nopagenumbers{}                                 % uncomment to suppress automatic page numbering for CVs longer than one page
+\moderncvstyle{classic}
+\moderncvcolor{red}
+\nopagenumbers{}
 
 % character encoding
-\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
-%\usepackage{CJKutf8}                             % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[utf8]{inputenc}
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}               % if you want to change the width of the column with the dates
-%\setlength{\makecvtitlenamewidth}{10cm}          % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
 % personal data
 \name{Kirill}{Bobyrev}
@@ -68,16 +66,16 @@
 \section{Projects}
   \cventry{2018--Present}{Suanni}{Prototyping in Progress}{}{}{Implementing
     \texttt{bc}-compatible arbitrary precision calculator in Rust}
-  \cventry{2018--Present}{Heathen}{Prototyping in Progress}{}{}{Implementing
-    LLVM-based peephole superoptimizer}
   \cventry{2015--Present}{LLVM}{}{}{}{Participating in LLVM-related projects and
     working on Clang-based C++ tooling}
 
 \section{Skills}
   \cvitem{Programming}{C++, Python, Rust, Haskell}
-  \cvitem{Software}{Linux, Vim, \LaTeX, Git, tmux, CMake}
-  \cvitem{Libraries}{LLVM, NumPy, SciPy, TensorFlow}
-  \cvitem{Languages}{English (fluent), Russian(fluent), German
+  \cvitem{Software}{Linux, Vim, \LaTeX, Git, tmux, CMake, LLDB}
+  \cvitem{Libraries}{LLVM, NumPy, SciPy, TensorFlow, Scikit-Learn}
+  \cvitem{Research Interests}{Convex Optimization, Optimizing Compilers,
+                              Static Analysis}
+  \cvitem{Languages}{English (fluent), Russian (fluent), German
           (advanced), Chinese (beginner)}
 
 \nocite{*}
