@@ -273,7 +273,7 @@
 \AtBeginDocument{\normalfont\color{color0}}
 
 % strings for internationalisation
-\newcommand*{\refname}{Research Activity}
+\newcommand*{\refname}{Research}
 \newcommand*{\enclname}{Enclosure}
 
 % makes the footer (normally used both for the resume and the letter)
