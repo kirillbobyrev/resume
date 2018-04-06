@@ -240,6 +240,7 @@
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 \newcommand*{\github}[1]{\def\@github{#1}}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+\newcommand*{\twitter}[1]{\def\@twitter{#1}}
 
 % colors
 \definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
@@ -267,6 +268,7 @@
 \newcommand*{\emailsymbol}{}
 \newcommand*{\homepagesymbol}{}
 \newcommand*{\githubsymbol}{}
+\newcommand*{\twittersymbol}{}
 \newcommand*{\linkedinsymbol}{}
 
 % fonts
