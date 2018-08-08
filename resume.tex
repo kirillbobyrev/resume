@@ -41,28 +41,35 @@
   \cventry{Class of 2019}{Bachelor of Science}{Moscow, Russia}{Moscow Institute
                           of Physics and Technology}
     {Applied Mathematics and Physics}
+    % FIXME(kbobyrev): Is this section relevant?
     {Relevant Coursework: Stochastic and Convex Optimization, Linear Algebra,
-     Machine Learning, Probability Theory and Statistics, Theory and
-     Implementation of Programming Languages, Functional Analysis, Advanced
-     Calculus, Parallel Computing, Quantum Mechanics.}
+     Machine Learning, Probability Theory and Statistics, Functional Analysis,
+     Advanced Calculus, Parallel Computing, Quantum Mechanics.}
 
 \section{Experience}
   \cventry{2018--Present}{Software Engineering Intern}
     {Google}{Munich}{}
-    {Working on ClangD --- the C++ Language Server Protocol implementation based
-    on Clang.}
+    {Working on ClangD, Clang-based C++ Language Server Protocol implementation.
+     \begin{itemize}
+       % FIXME(kbobyrev): Also created benchmark, measured performance, got a
+       % huge boost
+       \item Designed and implemented
+         \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
+         {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
+         matching-based code completion
+       \item Improved code completion quality in Clangd
+       % FIXME(kbobyrev): Map-Reduce global symbol index building; measure time,
+       % mention that it's map-reduce and it's just great. Would require
+       % compaction, though.
+     \end{itemize}}
   \cventry{2016}{Software Engineering
     Intern}{Google}{Munich}{C++ Language Tools Team}{\begin{itemize}
       \item Fixed a number of existing issues, introduced new functionality
         and gained users for clang-rename.
-      \item Designed and prototyped clang-refactor (which later split into
-        \href{https://clang.llvm.org/docs/RefactoringEngine.html}
-        {\textcolor{blue}{RefactoringEngine}},
-        \href{https://clang.llvm.org/extra/clangd.html}
-        {\textcolor{blue}{ClangD}} and few other projects, see
+      \item Designed and prototyped
         \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}
-        {\textcolor{blue}{design doc}} for reference)
-      \item Added new functionality to clang-tidy, a C++ linter tool.
+        {\textcolor{blue}{clang-refactor}}
+      \item Added new functionality to Clang-Tidy.
     \end{itemize}}
   \cventry{2015}{Google Summer of Code student}{LLVM
     Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
@@ -85,11 +92,10 @@
   \cventry{2018}{$\texttt{TD}(\gamma)$}{}
     {\url{https://github.com/kbobyrev/td-gamma}}{}
     {Implemented Reinforcement Learning algorithm after the original paper and
-     presented a poster showcasing the results. Algorithm's properties and
-     characteristics were thoroughly studied and described in the resulting
+     presented a poster showcasing the results. Algorithm's features were
+     thoroughly studied and showcased in
      \href{https://kbobyrev.github.io/resources/TD-Gamma-Poster.pdf}{\textcolor{blue}{poster}}
-     which won the student research competition in Mathematical Optimization
-     class at MIPT.}
+     which won student research competition in Mathematical Optimization class.}
   \cventry{2015--Present}{LLVM}{Open Source Compiler Infrastructure Project}{}{}
     {Participating in LLVM-related projects and working on Clang-based C++
      tooling.}
@@ -99,10 +105,6 @@
                        Haskell (beginner)}
   \cvitem{Software}{Vim, Git, \LaTeX, CMake, LLDB, tmux, Linux}
   \cvitem{Libraries}{LLVM, NumPy, MPI, OpenMP, SciPy, TensorFlow, Boost}
-  \cvitem{Interests}{Stochastic Optimization, Reinforcement Learning,
-                     Compilers, Static Analysis}
-  \cvitem{Languages}{English (fluent), Russian (fluent), German
-          (advanced), Chinese (beginner)}
 
 \nocite{*}
 \bibliographystyle{plain}
