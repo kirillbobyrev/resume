@@ -42,20 +42,23 @@
     Technology}{Applied Mathematics and Physics}{}
 
 \section{Experience}
-  \cventry{2018--Present}{Software Engineering Intern}
+  \cventry{2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
-    {Working on ClangD, Clang-based C++ Language Server Protocol implementation.
+    {Working on Clangd, Clang-based C++ Language Server Protocol implementation.
      \begin{itemize}
-       % FIXME(kbobyrev): Add numbers once they are there
        \item Designed and implemented
          \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
          {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
-         matching code completion
-       \item Boosted the quality and performance of symbol search by designing
-         and applying index optimizations
-       \item Profiled commonly used LLVM YAML serializer and made it up to
-         2.5x faster
-       \item Extended benchmarks infrastructure in LLVM
+         matching code completion.
+       \item Replaced previous Static Index implementation and gained up to
+         50x boost while providing more features for code completion-based
+         symbol search.
+       \item Implemented Variable Byte compression to reduce symbol index
+         memory consumption.
+       \item Identified performance bottlenecks in commonly used LLVM YAML
+         serializer and improved performance by a factor of 3.
+       \item Extended Clangd infrastructure by constructing benchamrks and
+         building index exploration tool.
      \end{itemize}}
   \cventry{2016}{Software Engineering
     Intern}{Google}{}{C++ Language Tools Team}{
@@ -63,25 +66,21 @@
     variables, functions, arguments.
     \begin{itemize}
       \item Fixed a number of existing issues, introduced new functionality
-        and gained users for clang-rename
+        and gained users for Clang-Rename.
+      \item Built Vim and Emacs integration for Clang-Rename tool.
       \item Designed and prototyped
         \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}
-        {\textcolor{blue}{clang-refactor}}
-      \item Added new functionality to Clang-Tidy
+        {\textcolor{blue}{clang-refactor}}, which later resulted in
+        \href{https://clang.llvm.org/docs/RefactoringEngine.html}{\textcolor{blue}{Clang's
+        Refactoring Engine}}.
+      \item Added new checks to Clang-Tidy and reduced false-positive rate for
+        few existing checks.
     \end{itemize}}
   \cventry{2015}{Google Summer of Code student}{LLVM
     Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
     Analyzer and used it to detect similar code pieces in Git,
     Vim, OpenSSL and other projects:\@ an overview of key results can be found
     \href{https://github.com/kbobyrev/code-clone-detection-llvm-devmtg15-poster\#code-clone-detection-llvm-devmtg15-poster}{\textcolor{blue}{here}}.}
-
-  \cventry{2012--2013}{Junior Game Developer}{Subterranean
-    Games}{Remote}{}{Supported
-    \href{http://store.steampowered.com/app/230190}{\textcolor{blue}{War For
-    the Overworld}} game development by implementing infrastructure tools for
-    level and game scenarios design during a successful
-    \href{https://www.kickstarter.com/projects/subterraneangames/war-for-the-overworld}{\textcolor{blue}{Kickstarter
-    Campaign}}.}
 
 \section{Projects}
   \cventry{2015--Present}{LLVM}{Open Source Compiler Infrastructure Project}{}{}
