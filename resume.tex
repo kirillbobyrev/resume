@@ -44,17 +44,19 @@
 \section{Experience}
   \cventry{2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
-    {Working on Clangd, Clang-based C++ Language Server Protocol implementation.
+    {Working on Clangd, Clang-based C++ Language Server Protocol implementation
+     used by CLion, XCode, Eclipse and other IDEs
      \begin{itemize}
        \item Designed and implemented
          \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
          {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
          matching code completion.
-       \item Replaced previous Static Index implementation and gained up to
-         15-35x boost while providing more features for code completion-based
-         symbol search.
-       \item Implemented Variable Byte compression to reduce symbol index
-         memory consumption.
+       \item Replaced previous Static Index implementation and gained over
+         15x performance boost while providing more features for code
+         completion-based symbol search.
+       \item New index implementation reduced code completion symbol search
+         average latency from 16 ms to 1.09 ms for LLVM codebase (3M Lines Of
+         Code) and from 119 ms to 1.9 ms for Chromium codebase (16M LOC)
        \item Identified performance bottlenecks in commonly used LLVM YAML
          serializer and improved performance by a factor of 3.
        \item Extended Clangd infrastructure by constructing benchamrks and
