@@ -57,6 +57,8 @@
        \item New index implementation reduced code completion symbol search
          average latency from 16 ms to 1.09 ms for LLVM codebase (3M Lines Of
          Code) and 119 ms to 1.9 ms for Chromium codebase (16M LOC).
+       \item Implemented Variable length Byte (VByte) compression algorithm and
+         reduced memory overhead by 60\%.
        \item Identified performance bottlenecks in commonly used LLVM YAML
          serializer and improved performance by a factor of 3.
      \end{itemize}}
@@ -102,8 +104,6 @@
 \section{Skills}
   \cvitem{Programming}{C++, Python, Rust}
   \cvitem{Software}{Vim, Git, \LaTeX, CMake, LLDB, tmux, Linux}
-  \cvitem{Interests}{Stochastic Optimization, Reinforcement Learning,
-                     Compilers, Static Analysis}
 
 \nocite{*}
 \bibliographystyle{plain}
