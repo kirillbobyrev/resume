@@ -242,6 +242,7 @@
 \newcommand*{\gitlab}[1]{\def\@gitlab{#1}}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
 \newcommand*{\twitter}[1]{\def\@twitter{#1}}
+\newcommand*{\medium}[1]{\def\@medium{#1}}
 
 % colors
 \definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
@@ -272,6 +273,7 @@
 \newcommand*{\gitlabsymbol}{}
 \newcommand*{\twittersymbol}{}
 \newcommand*{\linkedinsymbol}{}
+\newcommand*{\mediumsymbol}{}
 
 % fonts
 \AtBeginDocument{\normalfont\color{color0}}
