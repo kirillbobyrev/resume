@@ -43,7 +43,12 @@
     Technology}{Applied Mathematics and Physics}{}
 
 \section{Experience}
-  \cventry{2019}{Data Scientist}{Dbrain}{}{}{}
+  \cventry{2019}{Data Scientist}{Dbrain}{}{}{
+    Developed Deep Learning models for various computer vision tasks including
+    image classification, forgery detection and object segmentation using
+    PyTorch, implemented Machine Learning pipelines starting from raw data and
+    producing necessary predictions on par with state-of-the-art scientific
+    results.}
   \cventry{2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
     {Worked on Clangd, Clang-based C++ LSP implementation used by CLion, XCode,
@@ -56,6 +61,9 @@
        \item New index implementation reduced code completion symbol search
          average latency from 16 ms to 1.09 ms for LLVM codebase (3M Lines Of
          Code) and 119 ms to 1.9 ms for Chromium codebase (16M LOC).
+       \item Replaced previous Static Index implementation and gained over
+         15x performance boost while providing more features for code
+         completion-based symbol search.
        \item Implemented Variable length Byte (VByte) compression algorithm and
          reduced memory overhead by 60\%.
        \item Identified performance bottlenecks in commonly used LLVM YAML
@@ -86,24 +94,14 @@
 
 \section{Projects}
   \cventry{2015--Present}{LLVM}{Open Source Compiler Infrastructure Project}{}{}
-    {Participating in LLVM-related projects and working on Clang-based C++
-     tooling. This includes contributing to Clangd, Clang-Tidy, Clang Static
-     Analyzer and other C++ Language tools.}
-  \cventry{2018}{$\texttt{TD}(\gamma)$}{}
-    {\url{https://github.com/kirillbobyrev/td-gamma}}{}
-    {Implemented Reinforcement Learning algorithm after the original paper and
-     presented a poster showcasing the results. Algorithm's features were
-     thoroughly studied and showcased in the
-     \href{https://kirillbobyrev.github.io/resources/TD-Gamma-Poster.pdf}{\textcolor{blue}{poster}}.}
-  \cventry{2016}{VisARTM}{}
-    {url{https://github.com/kirillbobyrev/VisARTM}}{}
-    {Designed and implemented a tool for visualizing and assessing topic models
-     built using
-     \href{https://github.com/bigartm/bigartm}{\textcolor{blue}{BigARTM}}.}
+    {Participating in LLVM-related open source projects and working on
+     Clang-based C++ tooling. This includes contributions to Clangd, Clang-Tidy,
+     LLVM Core Libraries and Clang Static Analyzer.}
 
 \section{Skills}
-  \cvdoubleitem{Languages}{Modern C++ (C++20), Python}{Expertise}{Compilers,
+  \cvdoubleitem{Languages}{Modern C++ (C++20), Python, Go}{Expertise}{Compilers,
     Deep Learning}
+  \cvdoubleitem{Technologies}{LLVM, PyTorch, TensorFlow}{}{}
 
 \nocite{*}
 \bibliographystyle{plain}
