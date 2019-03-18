@@ -110,6 +110,7 @@
       \ifthenelse{\isundefined{\@twitter}}{}{\makenewline\twittersymbol\httplink{twitter.com/\@twitter}}%
       \ifthenelse{\isundefined{\@homepage}}{}{\makenewline\homepagesymbol\httplink{\@homepage}}%
       \ifthenelse{\isundefined{\@linkedin}}{}{\makenewline\linkedinsymbol\httplink{linkedin.com/in/\@linkedin}}%
+      \ifthenelse{\isundefined{\@goodreads}}{}{\makenewline\goodreadssymbol\httplink{goodreads.com/\@goodreads}}%
       \ifthenelse{\isundefined{\@medium}}{}{\makenewline\mediumsymbol \httplink{medium.com/@\@twitter}}%
       \ifthenelse{\isundefined{\@extrainfo}}{}{\makenewline\@extrainfo}%
     \end{tabular}

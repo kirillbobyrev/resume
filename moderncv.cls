@@ -240,9 +240,10 @@
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 \newcommand*{\github}[1]{\def\@github{#1}}
 \newcommand*{\gitlab}[1]{\def\@gitlab{#1}}
+\newcommand*{\goodreads}[1]{\def\@goodreads{#1}}
 \newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
-\newcommand*{\twitter}[1]{\def\@twitter{#1}}
 \newcommand*{\medium}[1]{\def\@medium{#1}}
+\newcommand*{\twitter}[1]{\def\@twitter{#1}}
 
 % colors
 \definecolor{color0}{rgb}{0,0,0}% main default color, normally left to black
@@ -262,18 +263,19 @@
 \renewcommand{\theenumiii}{\@roman\c@enumiii}
 \renewcommand{\theenumiv}{\@Alph\c@enumiv}
 %   other symbols
-\newcommand*{\listitemsymbol}{\labelitemi~}
 \newcommand*{\addresssymbol}{}
-\newcommand*{\mobilephonesymbol}{}
-\newcommand*{\fixedphonesymbol}{}
-\newcommand*{\faxphonesymbol}{}
 \newcommand*{\emailsymbol}{}
-\newcommand*{\homepagesymbol}{}
+\newcommand*{\faxphonesymbol}{}
+\newcommand*{\fixedphonesymbol}{}
 \newcommand*{\githubsymbol}{}
 \newcommand*{\gitlabsymbol}{}
-\newcommand*{\twittersymbol}{}
+\newcommand*{\goodreadssymbol}{}
+\newcommand*{\homepagesymbol}{}
 \newcommand*{\linkedinsymbol}{}
+\newcommand*{\listitemsymbol}{\labelitemi~}
 \newcommand*{\mediumsymbol}{}
+\newcommand*{\mobilephonesymbol}{}
+\newcommand*{\twittersymbol}{}
 
 % fonts
 \AtBeginDocument{\normalfont\color{color0}}
