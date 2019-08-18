@@ -20,9 +20,15 @@
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
 
+\usepackage[
+  backend=biber,
+  style=nature,
+]{biblatex}
+\addbibresource{publications.bib}
+
 % personal data
 \name{Kirill}{Bobyrev}
-\title{Computer Scientist}
+\title{Software Engineer/Product Manager}
 \address{Moscow, Russia}{}{}
 \email{kirillbobyrev@gmail.com}
 % \homepage{kirillbobyrev.com}
@@ -31,6 +37,10 @@
 \linkedin{kirillbobyrev}
 \goodreads{kirillbobyrev}
 
+% TODO: Ugly hack to remove numbers from publications.
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
 %-------------------------------------------------------------------------------
 % Resume
 %-------------------------------------------------------------------------------
@@ -38,19 +48,22 @@
 
 \makecvtitle
 
-\section{Education}
-  \cventry{Class of 2019}{BSc}{Russia}{Moscow Institute of Physics and
-    Technology}{Applied Mathematics and Physics}{}
+\section{Skills}
+  \cvdoubleitem{Languages}{Modern C++, Python, Go, Haskell}{Libraries}{LLVM,
+    PyTorch, Django}
 
 \section{Experience}
-  % TODO(kirillbobyrev): Tell more about tasks performed, partners I have worked
+  % TODO: Fill this in.
+  \cventry{Nov 2019 - Present}{Software Engineer}{Google}{}{}{
+    }
+  % TODO: Tell more about tasks performed, partners I have worked
   % with (AMG, etc) and negotiations.
-  \cventry{2019}{Data Scientist}{Dbrain}{}{}{
-    Implemented Deep Learning models for various Computer Vision tasks
-    including Image Classification and Object Segmentation using PyTorch and
-    TensorFlow, built Machine Learning pipelines starting from raw data and
-    producing necessary predictions on par with state-of-the-art results.}
-  \cventry{2018}{Software Engineering Intern}
+  \cventry{Feb 2019 - May 2019}{Data Scientist}{Dbrain}{}{}{
+    Implemented Deep Learning models in PyTorch and Tensorflow Computer Vision
+    tasks such as Image Classification and Object Segmentation, built Machine
+    Learning pipelines starting from raw data and producing necessary
+    predictions on par with state-of-the-art results.}
+  \cventry{Jul 2018 - Sep 2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
     {Worked on Clangd, Clang-based C++ LSP implementation used by CLion, XCode,
      Eclipse and other IDEs
@@ -70,7 +83,7 @@
        \item Identified performance bottlenecks in commonly used LLVM YAML
          serializer and improved performance by a factor of 3.
      \end{itemize}}
-  \cventry{2016}{Software Engineering
+  \cventry{Jun 2016 - Sep 2016}{Software Engineering
     Intern}{Google}{}{C++ Language Tools Team}{
     Worked on Clang-Rename, Clang-based tool for renaming symbols such as
     variables, functions, arguments.
@@ -86,25 +99,20 @@
       \item Added new checks to Clang-Tidy and reduced false-positive rate for
         few existing checks.
     \end{itemize}}
-  \cventry{2015}{Google Summer of Code student}{LLVM
+  \cventry{Jun 2015 - Sep 2015}{Google Summer of Code student}{LLVM
     Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
     Analyzer and used it to detect over 400 similar code pieces in Git,
     Vim, OpenSSL and other projects. GitHub page contains an
     \href{https://github.com/kirillbobyrev/code-clone-detection-llvm-devmtg15-poster\#code-clone-detection-llvm-devmtg15-poster}{\textcolor{blue}{overview}}
     of key results.}
 
-\section{Open Source Contributions}
-  \cventry{2015--Present}{LLVM}{Open Source Compiler Infrastructure Project}{}{}
-    {Participating in LLVM-related open source projects and working on
-     Clang-based C++ tooling. This includes contributions to Clangd, Clang-Tidy,
-     LLVM Core Libraries and Clang Static Analyzer.}
-
-\section{Skills}
-  \cvdoubleitem{Languages}{Modern C++, Python}{Technologies}{LLVM, PyTorch,
-    TensorFlow, OpenCV}
-
+% TODO: Ugly hack. Remove this?
+\renewcommand{\refname}{Publications \& Talks}
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}
+\printbibliography
+
+\section{Education}
+  \cventry{2014 - 2019}{BSc}{Russia}{Moscow Institute of Physics and
+    Technology}{Applied Mathematics and Physics}{}
 
 \end{document}
