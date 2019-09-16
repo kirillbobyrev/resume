@@ -267,15 +267,15 @@
 \newcommand*{\emailsymbol}{}
 \newcommand*{\faxphonesymbol}{}
 \newcommand*{\fixedphonesymbol}{}
-\newcommand*{\githubsymbol}{}
 \newcommand*{\gitlabsymbol}{}
 \newcommand*{\goodreadssymbol}{}
-\newcommand*{\homepagesymbol}{}
 \newcommand*{\linkedinsymbol}{}
 \newcommand*{\listitemsymbol}{\labelitemi~}
 \newcommand*{\mediumsymbol}{}
 \newcommand*{\mobilephonesymbol}{}
+\newcommand*{\githubsymbol}{}
 \newcommand*{\twittersymbol}{}
+\newcommand*{\homepagesymbol}{}
 
 % fonts
 \AtBeginDocument{\normalfont\color{color0}}

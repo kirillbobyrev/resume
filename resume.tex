@@ -7,7 +7,8 @@
 % possible options include font size ('10pt', '11pt' and '12pt'), paper size
 % ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
 % 'landscape') and font family ('sans' and 'roman')
-\documentclass[10pt,a4paper,sans]{moderncv}
+
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 \moderncvstyle{classic}
@@ -16,6 +17,8 @@
 
 % character encoding
 \usepackage[utf8]{inputenc}
+
+\usepackage[load=abbr]{siunitx}
 
 % adjust the page margins
 \usepackage[scale=0.8]{geometry}
@@ -28,14 +31,12 @@
 
 % personal data
 \name{Kirill}{Bobyrev}
-\title{Software Engineer/Product Manager}
-\address{Moscow, Russia}{}{}
+\title{Software Engineer}
 \email{kirillbobyrev@gmail.com}
-% \homepage{kirillbobyrev.com}
+\linkedin{kirillbobyrev}
 \github{kirillbobyrev}
 \twitter{kirillbobyrev}
-\linkedin{kirillbobyrev}
-\goodreads{kirillbobyrev}
+\homepage{kirillbobyrev.com}
 
 % TODO: Ugly hack to remove numbers from publications.
 \DeclareFieldFormat{labelnumberwidth}{}
@@ -44,13 +45,10 @@
 %-------------------------------------------------------------------------------
 % Resume
 %-------------------------------------------------------------------------------
+
 \begin{document}
 
 \makecvtitle
-
-\section{Skills}
-  \cvdoubleitem{Languages}{Modern C++, Python, Go, Haskell}{Libraries}{LLVM,
-    PyTorch, Django}
 
 \section{Experience}
   % TODO: Fill this in.
@@ -58,26 +56,34 @@
     }
   % TODO: Tell more about tasks performed, partners I have worked
   % with (AMG, etc) and negotiations.
-  \cventry{Feb 2019 - May 2019}{Data Scientist}{Dbrain}{}{}{
+  \cventry{Feb 2019 - Jun 2019}{Data Scientist}{Dbrain}{}{}{
     Implemented Deep Learning models in PyTorch and Tensorflow Computer Vision
     tasks such as Image Classification and Object Segmentation, built Machine
     Learning pipelines starting from raw data and producing necessary
-    predictions on par with state-of-the-art results.}
+    predictions on par with state-of-the-art results.
+    % TODO: Participated in negotiations with our clients such as AMG Mercedec Benz
+    % TODO: Transformed AMG problems into Machine Learning tasks
+    % TODO: Prepared data for such task as video fraud detection and engine sound detection.
+    % TODO: Engine sound detection.
+    }
   \cventry{Jul 2018 - Sep 2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
-    {Worked on Clangd, Clang-based C++ LSP implementation used by CLion, XCode,
-     Eclipse and other IDEs
+    {Worked on Clangd, Clang-based C++ Language Server Protocol implementation
+     used by CLion, XCode, Eclipse, a number of other IDEs and text editor
+     plugins
      \begin{itemize}
        \item Designed and implemented
          \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-         {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
+         {\textcolor{blue}{Dex}} efficient Clangd symbol index for fuzzy
          matching code completion.
-       \item New index implementation reduced code completion symbol search
-         average latency from 16 ms to 1.09 ms for LLVM codebase (3M Lines Of
-         Code) and 119 ms to 1.9 ms for Chromium codebase (16M LOC).
-       \item Replaced previous Static Index implementation and gained over
-         15x performance boost while providing more features for code
-         completion-based symbol search.
+         % TODO: Based on Russ Cox & Google CodeSearch...
+       \item Replaced previous Static Index implementation and gained over 15x
+         performance boost while providing more features such as advanced
+         filtering for code completion-based symbol search.
+       \item Reduced code completion symbol search average latency from
+         \SI{16}{\mics} to \SI{1.09}{\mics} for LLVM codebase (3M Lines Of
+         Code) and from \SI{119}{\mics} to \SI{1.9}{\mics} for Chromium
+         codebase (16M LOC).
        \item Implemented Variable length Byte (VByte) compression algorithm and
          reduced memory overhead by 60\%.
        \item Identified performance bottlenecks in commonly used LLVM YAML
@@ -88,9 +94,13 @@
     Worked on Clang-Rename, Clang-based tool for renaming symbols such as
     variables, functions, arguments.
     \begin{itemize}
+      % TODO: Which issues? Inconsistent renaming...
+      % TODO: How did I get new users? Announcements, answers on mailing
+      % lists...
       \item Fixed a number of existing issues, introduced new functionality
         and gained users for Clang-Rename.
-      \item Built Vim and Emacs integration for Clang-Rename tool.
+      \item Built Vim and Emacs plugins for Clang-Rename tool.
+      % TODO: Later picked up by Apple's Alex Lorenz....
       \item Designed and prototyped
         \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}
         {\textcolor{blue}{clang-refactor}}, which later resulted in
@@ -98,6 +108,8 @@
         Refactoring Engine}}.
       \item Added new checks to Clang-Tidy and reduced false-positive rate for
         few existing checks.
+      % TODO: Outlined the necessity of having Language Server which later
+      % resulted in Clangd which became the focus of the team.
     \end{itemize}}
   \cventry{Jun 2015 - Sep 2015}{Google Summer of Code student}{LLVM
     Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
@@ -106,13 +118,47 @@
     \href{https://github.com/kirillbobyrev/code-clone-detection-llvm-devmtg15-poster\#code-clone-detection-llvm-devmtg15-poster}{\textcolor{blue}{overview}}
     of key results.}
 
+\section{Projects}
+  \cventry{2015 - Present}{LLVM}{Open Source Compiler Infrastructure Project}{}{}
+    {Participating in LLVM-related projects and working on Clang-based C++
+     tooling. This includes contributing to Clangd, Clang-Tidy, Clang Static
+     Analyzer and other C++ Language tools.
+     % TODO: How many patches, LOCs and reviewed patches are there?
+     % TODO: Introduced Benchmark library
+     % TODO: Participated in the mailing list discussions.
+     % TODO: Featured in LLVM Weekly N times
+     }
+  \cventry{2019 - Present}{Jin}{Hobby Project}
+    {\url{https://github.com/kirillbobyrev/jin}}{}
+    {Designed and implemented a tool for personal finance \ldots. Python,
+     typing, testing, CI, linting ...}
+  \cventry{2019 - Present}{Milo}{Hobby Project}
+    {\url{https://github.com/kirillbobyrev/milo}}{}
+    {Taught myself Go and built a tool \ldots}
+  \cventry{2019 - Present}{kirillbobyrev.com}{Personal Blog and Portfolio}
+    {\url{https://kirillbobyrev.com}}{}
+    {Python, Django, portfolio, MAU, DAU, React \ldots}
+
 % TODO: Ugly hack. Remove this?
 \renewcommand{\refname}{Publications \& Talks}
 \nocite{*}
 \printbibliography
 
+% TODO: List Soft Skills: Product Management, Deep User Interviews, ...
+\section{Skills}
+  \cvitem{Programming Languages}{Modern C++, Python, Go, Haskell}
+  \cvitem{Libraries}{LLVM, TensorFlow, PyTorch, Django, Numpy}
+  \cvitem{Competencies}{Compilers, Machine Learning: Deep Learning, Computer
+    Vision, Reinforcement Learning, Algorithms and Data Structures}
+  \cvitem{Software}{Git, LLDB, Tmux, \LaTeX, (Neo)Vim, VSCode}
+  % TODO: Do a better job.
+  \cvitem{Soft Skills}{Product Management, User Interviews, Presenting highlights of my work, Interviewing candidates}
+  \cvitem{Languages}{English (Fluent), Russian (Fluent), German (Advanced)}
+
 \section{Education}
-  \cventry{2014 - 2019}{BSc}{Russia}{Moscow Institute of Physics and
+  \cventry{}{BSc}{Russia}{Moscow Institute of Physics and
     Technology}{Applied Mathematics and Physics}{}
+  \cventry{}{Yandex Management School}{}{Yandex}{Product and
+    Project Management}{Describe what I did here \ldots}
 
 \end{document}
