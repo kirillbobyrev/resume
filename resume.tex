@@ -4,23 +4,19 @@
 % conditions of the LaTeX Project Public License version 1.3c,
 % available at http://www.latex-project.org/lppl/.
 
-% possible options include font size ('10pt', '11pt' and '12pt'), paper size
-% ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and
-% 'landscape') and font family ('sans' and 'roman')
-
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-% moderncv themes
+% Use moderncv theme.
 \moderncvstyle{classic}
 \moderncvcolor{red}
 \nopagenumbers{}
 
-% character encoding
+% Character encoding.
 \usepackage[utf8]{inputenc}
 
 \usepackage[load=abbr]{siunitx}
 
-% adjust the page margins
+% Adjust the page margins.
 \usepackage[scale=0.8]{geometry}
 
 \usepackage[
@@ -29,7 +25,7 @@
 ]{biblatex}
 \addbibresource{publications.bib}
 
-% personal data
+% Contact data.
 \name{Kirill}{Bobyrev}
 \title{Software Engineer}
 \email{kirillbobyrev@gmail.com}
@@ -38,7 +34,6 @@
 \twitter{kirillbobyrev}
 \homepage{kirillbobyrev.com}
 
-% TODO: Ugly hack to remove numbers from publications.
 \DeclareFieldFormat{labelnumberwidth}{}
 \setlength{\biblabelsep}{0pt}
 
@@ -53,17 +48,28 @@
 \section{Experience}
   % TODO: Fill this in.
   \cventry{Nov 2019 - Present}{Software Engineer}{Google}{}{}{
+    % TODO: Led shared index design and implementation.
+    % TODO: Refactored renaming pipeline --- the most important refactoring
+    % action in Clangd.
+    % TODO: Took responsibilities of Product Manager & UX Researcher: drove
+    % Product Vision, interviewed users, prioritized tasks.
+    % TODO: Drove Vim plugins improvements.
+    % TODO: Advised ML for Code Completion.
     }
-  % TODO: Tell more about tasks performed, partners I have worked
-  % with (AMG, etc) and negotiations.
-  \cventry{Feb 2019 - Jun 2019}{Data Scientist}{Dbrain}{}{}{
-    Implemented Deep Learning models in PyTorch and Tensorflow Computer Vision
-    tasks such as Image Classification and Object Segmentation, built Machine
-    Learning pipelines starting from raw data and producing necessary
-    predictions on par with state-of-the-art results.
-    % TODO: Participated in negotiations with our clients such as AMG Mercedec Benz
-    % TODO: Transformed AMG problems into Machine Learning tasks
-    % TODO: Prepared data for such task as video fraud detection and engine sound detection.
+  % TODO: Write more about tasks performed, partners I have worked with (AMG,
+  % etc) and negotiations.
+  \cventry{Feb 2019 - Jun 2019}{Data Scientist}{Handl}{}{}{
+    % TODO: Handl is Y Combinator-backed startup doing what?
+    Handl is Y Combinator-backed startup. I implemented Deep Learning models
+    in PyTorch and TensorFlow Computer Vision tasks such as Image
+    Classification and Object Segmentation, built Machine Learning pipelines
+    starting from raw data and producing necessary predictions on par with
+    state-of-the-art results.
+    % TODO: Participated in negotiations with our clients such as AMG Mercedes
+    % Benz.
+    % TODO: Transformed AMG problems into Machine Learning tasks.
+    % TODO: Prepared data for such task as video fraud detection and engine
+    % sound detection.
     % TODO: Engine sound detection.
     }
   \cventry{Jul 2018 - Sep 2018}{Software Engineering Intern}
@@ -74,7 +80,7 @@
      \begin{itemize}
        \item Designed and implemented
          \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-         {\textcolor{blue}{Dex}} efficient Clangd symbol index for fuzzy
+         {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
          matching code completion.
          % TODO: Based on Russ Cox & Google CodeSearch...
        \item Replaced previous Static Index implementation and gained over 15x
@@ -124,37 +130,31 @@
     Clang-based C++ tooling. This includes contributing to Clangd, Clang-Tidy,
     Clang Static Analyzer and other C++ Language tools.
     % TODO: How many patches, LOCs and reviewed patches are there?
-    % TODO: Introduced Benchmark library
     % TODO: Participated in the mailing list discussions.
     % TODO: Featured in LLVM Weekly N times
     }
-  \cventry{2019 - Present}{Jin}{Hobby Project}
-    {\url{https://github.com/kirillbobyrev/jin}}{}
-    {Designed and implemented a tool for personal finance \ldots. Python,
-     typing, testing, CI, linting ...}
-  \cventry{2019 - Present}{Milo}{Hobby Project}
-    {\url{https://github.com/kirillbobyrev/milo}}{}
-    {Taught myself Go and built a tool \ldots}
+  % TODO: Aiseu: Compiler from WebAssembly into LLVM IR.
 
-% TODO: Ugly hack. Remove this?
 \renewcommand{\refname}{Publications \& Conference Talks}
 \nocite{*}
 \printbibliography
 
 % TODO: List Soft Skills: Product Management, Deep User Interviews, ...
 \section{Skills}
-  \cvitem{Programming Languages}{Modern C++, Python, Go, Haskell}
+  \cvitem{Programming Languages}{Modern C++, Python, Rust, Haskell}
   \cvitem{Libraries}{LLVM, TensorFlow, Numpy, PyTorch}
   \cvitem{Competencies}{Compilers, Machine Learning: Deep Learning, Computer
     Vision, Reinforcement Learning, Algorithms and Data Structures}
   \cvitem{Software}{Linux, Git, LLDB, Tmux, \LaTeX, (Neo)Vim, VSCode}
   % TODO: Do a better job.
-  \cvitem{Soft Skills}{Product Management, User Interviews, Presenting highlights of my work, Interviewing candidates}
+  \cvitem{Soft Skills}{Product Management, User Interviews,
+    Interviewing candidates}
   \cvitem{Languages}{English (Fluent), Russian (Fluent), German (Advanced)}
 
 \section{Education}
   \cventry{}{BSc}{Russia}{Moscow Institute of Physics and
     Technology}{Applied Mathematics and Physics}{}
+  % TODO: Fill this in.
   \cventry{}{Yandex Management School}{}{Yandex}{Product and
     Project Management}{Describe what I did here \ldots}
 

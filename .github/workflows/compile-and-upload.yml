@@ -1,0 +1,39 @@
+name: Build and upload resume
+on: [push]
+jobs:
+  build:
+    name: Compile PDF via LaTeX and publish it in the GitHub release
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install LaTeX
+      run: >
+        apt-get install texlive-base
+    - name: Compile resume
+      run: >
+        pdflatex resume.tex -o Kirill-Bobyrev-Resume.pdf
+        pdflatex resume.tex -o Kirill-Bobyrev-Resume.pdf
+    - name: Compute release info
+      run: >
+        echo ::set-env name=RELEASE_DATE::$(date -u +%d-%m-%Y)
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: ${{ RELEASE_DATE }} @${{ github.ref }}
+        draft: false
+        prerelease: false
+    - name: Upload Release Asset
+      id: upload-release-asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./Kirill-Bobyrev-Resume.pdf
+        asset_name: Kirill-Bobyrev-Resume.pdf
+        asset_content_type: application/zip
