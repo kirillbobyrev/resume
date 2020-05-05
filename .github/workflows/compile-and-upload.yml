@@ -8,7 +8,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Install LaTeX
-      run: >
+      run: |
         sudo apt-get install texlive-base
         sudo apt-get install texlive-latex-base
         sudo apt-get install texlive-fonts-recommended
