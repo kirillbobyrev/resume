@@ -46,43 +46,48 @@
 \makecvtitle
 
 \section{Experience}
-  % TODO: Fill this in.
   \cventry{Nov 2019 - Present}{Software Engineer}{Google}{}{}{
-    % TODO: Led shared index design and implementation.
-    % TODO: Refactored renaming pipeline --- the most important refactoring
-    % action in Clangd.
-    % TODO: Took responsibilities of Product Manager & UX Researcher: drove
-    % Product Vision, interviewed users, prioritized tasks.
-    % TODO: Drove Vim plugins improvements.
-    % TODO: Advised ML for Code Completion.
+    Working on \href{https://clangd.llvm.org/}{\textcolor{blue}{Clangd}},
+    Clang-based C++ Language Server Protocol implementation for Visual Studio
+    Code, Vim, CLion, XCode, Eclipse, a number of other IDEs and text editor
+    plugins.
+    \begin{itemize}
+      \item Implemented remote code completion service that serves an index for
+        LLVM and Chrome. This allows developers with slow machines to get
+        precise code completion and navigation for these large projects.
+      \item Took responsibilities of Product Manager and User Experience
+        Researcher: continuously interviewed our users and processed feedback,
+        built feature roadmaps and prioritized tasks based on the needs of our
+        users.
+      \item Lead Semantic Highlighting improvements for our Visual Studio Code
+        plugin that is used by over $50\,000$ users and our Vim plugin that is
+        also commonly used by Google developers.
+    \end{itemize}
     }
-  % TODO: Write more about tasks performed, partners I have worked with (AMG,
-  % etc) and negotiations.
-  \cventry{Feb 2019 - Jun 2019}{Data Scientist}{Handl}{}{}{
-    % TODO: Handl is Y Combinator-backed startup doing what?
-    Handl is Y Combinator-backed startup. I implemented Deep Learning models
-    in PyTorch and TensorFlow Computer Vision tasks such as Image
-    Classification and Object Segmentation, built Machine Learning pipelines
-    starting from raw data and producing necessary predictions on par with
-    state-of-the-art results.
-    % TODO: Participated in negotiations with our clients such as AMG Mercedes
-    % Benz.
-    % TODO: Transformed AMG problems into Machine Learning tasks.
-    % TODO: Prepared data for such task as video fraud detection and engine
-    % sound detection.
-    % TODO: Engine sound detection.
+  \cventry{Feb 2019 - Jun 2019}{Data Scientist}
+  {\href{https://handl.ai/}{\textcolor{blue}{Handl}}, Y Combinator Startup}{}{}{
+    Handl uses Machinhe Learning to to convert documents into structured
+    data.
+    \begin{itemize}
+      \item Implemented state-pf-the-art Deep Learning models for Optical
+        Character Recognition in PyTorch and TensorFlow.
+      \item Secured a contract with AMG Mercedes Benz, worked out how to
+        translate their business goals into fine-grained technical problems and
+        lead the project.
+      \item Built models Image and Sound Segmentation, Image Classification and
+        Video Fraud Detection for our clients.
+    \end{itemize}
     }
   \cventry{Jul 2018 - Sep 2018}{Software Engineering Intern}
     {Google}{}{C++ Language Tools Team}
-    {Worked on Clangd, Clang-based C++ Language Server Protocol implementation
-     used by CLion, XCode, Eclipse, a number of other IDEs and text editor
-     plugins
+    {Significantly improved C++ code completion for large projects.
      \begin{itemize}
        \item Designed and implemented
          \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-         {\textcolor{blue}{Dex}} --- efficient Clangd symbol index for fuzzy
-         matching code completion.
-         % TODO: Based on Russ Cox & Google CodeSearch...
+         {\textcolor{blue}{Dex}} -- efficient Clangd symbol index for fuzzy
+         matching code completion based on Russ Cox
+         \href{https://swtch.com/~rsc/regexp/regexp4.html}{\textcolor{blue}{design}}
+         of Google Code Search.
        \item Replaced previous Static Index implementation and gained over 15x
          performance boost while providing more features such as advanced
          filtering for code completion-based symbol search.
@@ -100,22 +105,19 @@
     Worked on Clang-Rename, Clang-based tool for renaming symbols such as
     variables, functions, arguments.
     \begin{itemize}
-      % TODO: Which issues? Inconsistent renaming...
-      % TODO: How did I get new users? Announcements, answers on mailing
-      % lists...
-      \item Fixed a number of existing issues, introduced new functionality
+      \item Fixed a number of existing issues such as inconsistent renaming
+        and lack of support for template classes, introduced new functionality
         and gained users for Clang-Rename.
       \item Built Vim and Emacs plugins for Clang-Rename tool.
-      % TODO: Later picked up by Apple's Alex Lorenz....
       \item Designed and prototyped
         \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}
         {\textcolor{blue}{clang-refactor}}, which later resulted in
         \href{https://clang.llvm.org/docs/RefactoringEngine.html}{\textcolor{blue}{Clang's
         Refactoring Engine}}.
+      \item Started a discussion about building Language Server which later
+        resulted in Clangd creation and became the main focus of the team.
       \item Added new checks to Clang-Tidy and reduced false-positive rate for
-        few existing checks.
-      % TODO: Outlined the necessity of having Language Server which later
-      % resulted in Clangd which became the focus of the team.
+        existing ones.
     \end{itemize}}
   \cventry{Jun 2015 - Sep 2015}{Google Summer of Code student}{LLVM
     Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
@@ -128,12 +130,12 @@
   \cventry{2015 - Present}{LLVM}{Open Source Compiler Infrastructure
     Project}{}{}{Participating in LLVM-related projects and working on
     Clang-based C++ tooling. This includes contributing to Clangd, Clang-Tidy,
-    Clang Static Analyzer and other C++ Language tools.
-    % TODO: How many patches, LOCs and reviewed patches are there?
-    % TODO: Participated in the mailing list discussions.
-    % TODO: Featured in LLVM Weekly N times
+    Clang Static Analyzer and other C++ Language tools. My work has been
+    featured multiple times on \href{http://llvmweekly.org/}{LLVM Weekly}
+    covering the most important recent changes.
+    \href{https://github.com/llvm/llvm-project/commits?author=kirillbobyrev}{\textcolor{blue}{List}}
+    of all my commits.
     }
-  % TODO: Aiseu: Compiler from WebAssembly into LLVM IR.
 
 \renewcommand{\refname}{Publications \& Conference Talks}
 \nocite{*}
@@ -156,6 +158,6 @@
     Technology}{Applied Mathematics and Physics}{}
   % TODO: Fill this in.
   \cventry{}{Yandex Management School}{}{Yandex}{Product and
-    Project Management}{Describe what I did here \ldots}
+    Project Management}{}
 
 \end{document}
