@@ -20,8 +20,9 @@ jobs:
         sudo apt-get install fonts-font-awesome
     - name: Compile resume
       run: >
-        xelatex resume.tex -o Kirill-Bobyrev-Resume.pdf
-        xelatex resume.tex -o Kirill-Bobyrev-Resume.pdf
+        xelatex resume.tex
+        xelatex resume.tex
+        mv resume.pdf Kirill-Bobyrev-Resume.pdf
     - name: Compute release info
       run: >
         echo ::set-env name=RELEASE_DATE::$(date -u +%d-%m-%Y)
