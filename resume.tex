@@ -1,163 +1,78 @@
-%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
 %
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%
 
-\documentclass[11pt,a4paper,sans]{moderncv}
+%-------------------------------------------------------------------------------
+% CONFIGURATION
+%-------------------------------------------------------------------------------
 
-% Use moderncv theme.
-\moderncvstyle{classic}
-\moderncvcolor{red}
-\nopagenumbers{}
+\documentclass[11pt, a4paper]{awesome-cv}
 
-% Character encoding.
-\usepackage[utf8]{inputenc}
+\newcommand{\link}[2]{\href{#2}{\textcolor{yinmn}{\textbf{#1}}}}
 
-\usepackage[load=abbr]{siunitx}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
-% Adjust the page margins.
-\usepackage[scale=0.8]{geometry}
+\usepackage{siunitx}
 
-\usepackage[
-  backend=biber,
-  style=nature,
-]{biblatex}
-\addbibresource{publications.bib}
+\fontdir[fonts/]
 
-% Contact data.
+\definecolor{yinmn}{HTML}{2E5090}
+\colorlet{awesome}{yinmn}
+
+\setbool{acvSectionColorHighlight}{true}
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
 \name{Kirill}{Bobyrev}
-\title{Software Engineer}
-\email{kirillbobyrev@gmail.com}
-\linkedin{kirillbobyrev}
-\github{kirillbobyrev}
-\twitter{kirillbobyrev}
+\position{Software Engineer{\enskip\cdotp\enskip}Product Manager}
+\address{Munich, Germany}
+
+\email{kirillbobyrev.com}
 \homepage{kirillbobyrev.com}
+\github{kirillbobyrev}
+\linkedin{kirillbobyrev}
+\twitter{@kirillbobyrev}
+% \extrainfo{extra information}
+% \mobile{(+7) 915-118-7489}
 
-\DeclareFieldFormat{labelnumberwidth}{}
-\setlength{\biblabelsep}{0pt}
+% \quote{``Be the change that you want to see in the world."}
 
 %-------------------------------------------------------------------------------
-% Resume
-%-------------------------------------------------------------------------------
-
 \begin{document}
+\makecvheader[C]
 
-\makecvtitle
+\makecvfooter
+  {}
+  {Kirill Bobyrev~~~·~~~Résumé}
+  {\thepage}
 
-\section{Experience}
-  \cventry{Nov 2019 - Present}{Software Engineer}{Google}{}{}{
-    Working on \href{https://clangd.llvm.org/}{\textcolor{blue}{Clangd}},
-    Clang-based C++ Language Server Protocol implementation for Visual Studio
-    Code, Vim, CLion, XCode, Eclipse, a number of other IDEs and text editor
-    plugins.
-    \begin{itemize}
-      \item Implemented remote code completion service that serves an index for
-        LLVM and Chrome. This allows developers with slow machines to get
-        precise code completion and navigation for these large projects.
-      \item Took responsibilities of Product Manager and User Experience
-        Researcher: continuously interviewed our users and processed feedback,
-        built feature roadmaps and prioritized tasks based on the needs of our
-        users.
-      \item Lead Semantic Highlighting improvements for our Visual Studio Code
-        plugin that is used by over $50\,000$ users and our Vim plugin that is
-        also commonly used by Google developers.
-    \end{itemize}
-    }
-  \cventry{Feb 2019 - Jun 2019}{Data Scientist}
-  {\href{https://handl.ai/}{\textcolor{blue}{Handl}}, Y Combinator Startup}{}{}{
-    Handl uses Machinhe Learning to to convert documents into structured
-    data.
-    \begin{itemize}
-      \item Implemented state-pf-the-art Deep Learning models for Optical
-        Character Recognition in PyTorch and TensorFlow.
-      \item Secured a contract with AMG Mercedes Benz, worked out how to
-        translate their business goals into fine-grained technical problems and
-        lead the project.
-      \item Built models Image and Sound Segmentation, Image Classification and
-        Video Fraud Detection for our clients.
-    \end{itemize}
-    }
-  \cventry{Jul 2018 - Sep 2018}{Software Engineering Intern}
-    {Google}{}{C++ Language Tools Team}
-    {Significantly improved C++ code completion for large projects.
-     \begin{itemize}
-       \item Designed and implemented
-         \href{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-         {\textcolor{blue}{Dex}} -- efficient Clangd symbol index for fuzzy
-         matching code completion based on Russ Cox
-         \href{https://swtch.com/~rsc/regexp/regexp4.html}{\textcolor{blue}{design}}
-         of Google Code Search.
-       \item Replaced previous Static Index implementation and gained over 15x
-         performance boost while providing more features such as advanced
-         filtering for code completion-based symbol search.
-       \item Reduced code completion symbol search average latency from
-         \SI{16}{\mics} to \SI{1.09}{\mics} for LLVM codebase (3M Lines Of
-         Code) and from \SI{119}{\mics} to \SI{1.9}{\mics} for Chromium
-         codebase (16M LOC).
-       \item Implemented Variable length Byte (VByte) compression algorithm and
-         reduced memory overhead by 60\%.
-       \item Identified performance bottlenecks in commonly used LLVM YAML
-         serializer and improved performance by a factor of 3.
-     \end{itemize}}
-  \cventry{Jun 2016 - Sep 2016}{Software Engineering
-    Intern}{Google}{}{C++ Language Tools Team}{
-    Worked on Clang-Rename, Clang-based tool for renaming symbols such as
-    variables, functions, arguments.
-    \begin{itemize}
-      \item Fixed a number of existing issues such as inconsistent renaming
-        and lack of support for template classes, introduced new functionality
-        and gained users for Clang-Rename.
-      \item Built Vim and Emacs plugins for Clang-Rename tool.
-      \item Designed and prototyped
-        \href{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing}
-        {\textcolor{blue}{clang-refactor}}, which later resulted in
-        \href{https://clang.llvm.org/docs/RefactoringEngine.html}{\textcolor{blue}{Clang's
-        Refactoring Engine}}.
-      \item Started a discussion about building Language Server which later
-        resulted in Clangd creation and became the main focus of the team.
-      \item Added new checks to Clang-Tidy and reduced false-positive rate for
-        existing ones.
-    \end{itemize}}
-  \cventry{Jun 2015 - Sep 2015}{Google Summer of Code student}{LLVM
-    Community}{Remote}{}{Implemented Code Clone Detection tool in Clang Static
-    Analyzer and used it to detect over 400 similar code pieces in Git,
-    Vim, OpenSSL and other projects. GitHub page contains an
-    \href{https://github.com/kirillbobyrev/code-clone-detection-llvm-devmtg15-poster\#code-clone-detection-llvm-devmtg15-poster}{\textcolor{blue}{overview}}
-    of key results.}
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
 
-\section{Projects}
-  \cventry{2015 - Present}{LLVM}{Open Source Compiler Infrastructure
-    Project}{}{}{Participating in LLVM-related projects and working on
-    Clang-based C++ tooling. This includes contributing to Clangd, Clang-Tidy,
-    Clang Static Analyzer and other C++ Language tools. My work has been
-    featured multiple times on \href{http://llvmweekly.org/}{LLVM Weekly}
-    covering the most important recent changes.
-    \href{https://github.com/llvm/llvm-project/commits?author=kirillbobyrev}{\textcolor{blue}{List}}
-    of all my commits.
-    }
+\input{content/summary.tex}
+\input{content/experience.tex}
+\input{content/talks_and_publications.tex}
+\input{content/education.tex}
+\input{content/extracurricular.tex}
+\input{content/skills.tex}
 
-\renewcommand{\refname}{Publications \& Conference Talks}
-\nocite{*}
-\printbibliography
-
-% TODO: List Soft Skills: Product Management, Deep User Interviews, ...
-\section{Skills}
-  \cvitem{Programming Languages}{Modern C++, Python, Rust, Haskell}
-  \cvitem{Libraries}{LLVM, TensorFlow, Numpy, PyTorch}
-  \cvitem{Competencies}{Compilers, Machine Learning: Deep Learning, Computer
-    Vision, Reinforcement Learning, Algorithms and Data Structures}
-  \cvitem{Software}{Linux, Git, LLDB, Tmux, \LaTeX, (Neo)Vim, VSCode}
-  % TODO: Do a better job.
-  \cvitem{Soft Skills}{Product Management, User Interviews,
-    Interviewing candidates}
-  \cvitem{Languages}{English (Fluent), Russian (Fluent), German (Advanced)}
-
-\section{Education}
-  \cventry{}{BSc}{Russia}{Moscow Institute of Physics and
-    Technology}{Applied Mathematics and Physics}{}
-  % TODO: Fill this in.
-  \cventry{}{Yandex Management School}{}{Yandex}{Product and
-    Project Management}{}
-
+%-------------------------------------------------------------------------------
 \end{document}

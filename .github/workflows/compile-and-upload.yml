@@ -16,12 +16,12 @@ jobs:
         sudo apt-get install texlive-fonts-extra
         sudo apt-get install texlive-science
         sudo apt-get install texlive-bibtex-extra biber
+        sudo apt-get install texlive-xetex
         sudo apt-get install fonts-font-awesome
     - name: Compile resume
       run: >
-        pdflatex resume.tex -o Kirill-Bobyrev-Resume.pdf
-        biber resume
-        pdflatex resume.tex -o Kirill-Bobyrev-Resume.pdf
+        xelatex resume.tex -o Kirill-Bobyrev-Resume.pdf
+        xelatex resume.tex -o Kirill-Bobyrev-Resume.pdf
     - name: Compute release info
       run: >
         echo ::set-env name=RELEASE_DATE::$(date -u +%d-%m-%Y)
