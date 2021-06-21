@@ -1,6 +1,8 @@
 ---
 name: Build and upload resume
-on: [push]
+
+on: push
+
 jobs:
   build:
     name: Compile PDF via LaTeX and publish it in the GitHub release
