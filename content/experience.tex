@@ -9,17 +9,22 @@
     {Nov 2019 - Present}
     {
       \begin{cvitems}
-        \item Significantly improved \link{Clangd}{https://clangd.llvm.org/},
+        \item Significantly improved \link{clangd}{https://clangd.llvm.org/},
           Clang-based C++ Language Server Protocol implementation for Visual
           Studio Code, Vim, CLion, XCode, Eclipse, a number of other IDEs and
           text editor plugins.
         \item Implemented \link{Remote Index service}{https://clangd-index.llvm.org/}
           LLVM and Chrome. This allows developers with slow machines to get
           precise code completion and navigation for these large projects.
+          Deployed and maintained the service (up to 100000 requests/day in
+          non-public beta).
         \item Took responsibilities of Product Manager and User Experience
           Researcher: continuously interviewed our users and processed feedback,
           built feature roadmaps and prioritized tasks based on the needs of our
           users.
+        \item Designed and implemented \link{IWYU}{https://include-what-you-use.org/}-like
+          functionality in clangd for warning users about unused and missing
+          headers.
       \end{cvitems}
     }
 
@@ -52,7 +57,7 @@
       \begin{cvitems}
         \item Designed and implemented
           \link{Dex}{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-          --- efficient Clangd symbol index for fuzzy matching code completion
+          --- efficient clangd symbol index for fuzzy matching code completion
           based on Russ Cox
           \link{design}{https://swtch.com/~rsc/regexp/regexp4.html} of Google
           Code Search.
@@ -91,7 +96,7 @@
           which later transformed into
           \link{Clang's Refactoring Engine}{https://clang.llvm.org/docs/RefactoringEngine.html}
         \item Started a discussion about building Language Server Protocol
-          implementation which later resulted in Clangd creation and became the
+          implementation which later resulted in clangd creation and became the
           main focus of the team.
         \item Added new checks to
           \link{Clang-Tidy}{https://clang.llvm.org/extra/clang-tidy/} and
