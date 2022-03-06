@@ -13,17 +13,18 @@
           Clang-based C++ Language Server Protocol implementation that brings
           IDE-like experience for for Visual Studio Code, Vim, CLion, XCode,
           Eclipse, a number of other IDEs and text editors.
-        \item Designed and implemented
+        \item Designed and implemented IncludeCleaner:
           \link{IWYU}{https://include-what-you-use.org/}-like functionality in
           clangd for warning users about unused and missing headers.
-        \item Implemented \link{Remote Index service}{https://clangd-index.llvm.org/}
-          LLVM and Chrome. This allows developers with slow machines to get
-          precise code completion and navigation for these large projects.
-          Deployed and maintained the service (up to 100000 requests/day in
-          non-public beta).
-        \item Took responsibilities of Product Manager and User Experience
-          Researcher: continuously interviewed our users and processed feedback,
-          built feature roadmaps and prioritized tasks based on the needs of our
+        \item Implemented \link{Remote Index
+          service}{https://clangd-index.llvm.org/} for LLVM and Chrome. This
+          allows developers with slow machines to get precise code completion
+          and navigation for these large projects. Deployed the service to
+          Google Cloud and maintained it, the service is handling 1.5M+ requests
+          per week.
+        \item Took responsibilities of Product Manager and UX Researcher:
+          continuously interviewed our users and processed feedback, built
+          feature roadmaps and prioritized tasks based on the needs of our
           users.
       \end{cvitems}
     }
@@ -56,19 +57,19 @@
       \begin{cvitems}
         \item Designed and implemented
           \link{Dex}{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-          --- efficient clangd symbol index for fuzzy matching code completion
+          --- efficient index for code completion
           based on Russ Cox
           \link{design}{https://swtch.com/~rsc/regexp/regexp4.html} of Google
           Code Search.
-        \item Replaced previous Static Index implementation and gained over
-          \textbf{15x performance boost} while providing more features such as
-          advanced filtering for code completion-based symbol search.
+        \item Replaced previous index implementation and gained
+          \textbf{15x-60x performance boost} while providing more features such
+          as advanced filtering for code completion-based symbol search.
         \item Reduced code completion average latency from \SI{16}{\us} to
           \SI{1.09}{\us} for LLVM codebase (3M Lines Of Code) and from
           \SI{119}{\us} to \SI{1.9}{\us} for Chromium codebase (16M LOC).
         \item Implemented Variable length Byte (VByte) compression algorithm
-          and reduced memory overhead by 60\% with insignificant loss of
-          speed and no precision loss.
+          and reduced memory overhead by 60\% with insignificant loss of speed
+          and no precision loss.
         \item Identified performance bottlenecks in commonly used LLVM YAML
           serializer and made it 3 times faster.
       \end{cvitems}
@@ -82,18 +83,18 @@
     {
       \begin{cvitems}
         \item Elevated performance of
-        \link{Clang-Rename}{https://clang.llvm.org/extra/clang-rename.html},
+          \link{Clang-Rename}{https://clang.llvm.org/extra/clang-rename.html},
           Clang-based tool that can perform efficient renaming actions in
-          large-scale projects such as renaming classes, functions,
-          variables, arguments, namespaces etc.
+          large-scale projects such as renaming classes, functions, variables,
+          arguments, namespaces etc.
         \item Fixed inconsistent renaming bugs, added support for template
           classes, introduced new functionality and gained users for
           Clang-Rename.
         \item Built Vim and Emacs plugins for Clang-Rename tool.
         \item Designed and prototyped
           \link{Clang-Refactor}{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing},
-          which later transformed into
-          \link{Clang's Refactoring Engine}{https://clang.llvm.org/docs/RefactoringEngine.html}
+          which later transformed into \link{Clang's Refactoring
+          Engine}{https://clang.llvm.org/docs/RefactoringEngine.html}
         \item Started a discussion about building Language Server Protocol
           implementation which later resulted in clangd creation and became the
           main focus of the team.

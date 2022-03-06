@@ -8,21 +8,20 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-    - name: Install LaTeX
-      run: |
-        sudo apt-get install texlive-base
-        sudo apt-get install texlive-latex-base
-        sudo apt-get install texlive-latex-extra
-        sudo apt-get install texlive-fonts-recommended
-        sudo apt-get install texlive-fonts-extra
-        sudo apt-get install texlive-science
-        sudo apt-get install texlive-bibtex-extra biber
-        sudo apt-get install texlive-xetex
-        sudo apt-get install fonts-font-awesome
+    - name: Install Rust toolchain
+      uses: actions-rs/toolchain@v1
+      with:
+        profile: minimal
+        toolchain: stable
+        override: true
+    - name: Install Tectonic
+      uses: actions-rs/cargo@v1
+      with:
+        command: install
+        args: tectonic
     - name: Compile resume
       run: >
-        xelatex resume.tex
-        xelatex resume.tex
+        tectonic resume.tex
     - name: Rename output file
       run: >
         mv resume.pdf Kirill-Bobyrev-Resume.pdf
