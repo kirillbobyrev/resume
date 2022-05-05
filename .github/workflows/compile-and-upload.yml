@@ -30,13 +30,14 @@ jobs:
     - name: Compute release info
       run: >
         echo "RELEASE_DATE=$(date -u +%d-%m-%Y)" >> $GITHUB_ENV
+        echo "RELEASE_TIME=$(date -u +%H-%M)" >> $GITHUB_ENV
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: v${{ env.RELEASE_DATE }}
+        tag_name: v${{ env.RELEASE_DATE }}-${{ env.RELEASE_TIME }}
         release_name: Resume ${{ env.RELEASE_DATE }}
     - name: Upload Release Asset
       id: upload-release-asset

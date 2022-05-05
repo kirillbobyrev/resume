@@ -78,6 +78,8 @@
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
+% Needed to refer to the number of pages.
+\RequirePackage{lastpage}
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
