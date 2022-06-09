@@ -9,8 +9,8 @@
     {Jun 2022 - Present}
     {
       \begin{cvitems}
-        \item Working on \link{Simulation
-        City}{https://blog.waymo.com/2021/06/SimulationCity.html}: Waymo's most
+        \item Working on \link{SimCity}
+	{https://blog.waymo.com/2021/06/SimulationCity.html}: Waymo's most
         advanced simulation system for autonomous driving.
       \end{cvitems}
     }
@@ -22,18 +22,19 @@
     {Nov 2019 - Jun 2022}
     {
       \begin{cvitems}
-        \item Significantly improved \link{clangd}{https://clangd.llvm.org/},
-          Clang-based C++ Language Server Protocol implementation that brings
-          IDE-like experience for for Visual Studio Code, Vim, CLion, XCode,
-          Eclipse, a number of other IDEs and text editors.
+        \item Significantly improved \link{clangd}
+	  {https://clangd.llvm.org/features}, Clang-based C++ Language
+	  Server Protocol implementation that brings IDE-like experience for
+	  for Visual Studio Code, Vim, CLion, XCode, a number of
+	  other IDEs and text editors.
         \item Designed and implemented IncludeCleaner:
-          \link{IWYU}{https://include-what-you-use.org/}-like functionality in
-          clangd for warning users about unused and missing headers.
+          \link{IWYU}{https://include-what-you-use.org/}-like functionality
+          for warning users about unused and missing headers.
         \item Implemented \link{Remote Index
-          service}{https://clangd-index.llvm.org/} for LLVM and Chrome. This
+          service}{https://clangd-index.llvm.org/} for LLVM and Chromium. This
           allows developers with slow machines to get precise code completion
-          and navigation for these large projects. Deployed the service to
-          Google Cloud and maintained it, the service is handling 1.5M+ requests
+          and navigation with zero startup time. Deployed the service to Google
+	  Cloud and maintained it. The service is handling 1.5M+ requests
           per week.
         \item Took responsibilities of Product Manager and UX Researcher:
           continuously interviewed our users and processed feedback, built
@@ -53,9 +54,9 @@
       \begin{cvitems}
         \item Secured a contract with AMG Mercedes Benz, worked out how to
           translate their business goals into fine-grained technical problems
-          and led the project of generating insights from provided data.
-        \item Built Deep Learning models for a our clients' variety of tasks
-          such as Image and Sound Segmentation, Image and Video Classification.
+          and led the project.
+        \item Built Deep Learning models for a variety of tasks such as Image
+	  and Sound Segmentation, Image and Video Classification.
         \item Contributed to state-of-the-art Deep Learning models for Optical
           Character Recognition in PyTorch and TensorFlow.
       \end{cvitems}
@@ -70,21 +71,17 @@
       \begin{cvitems}
         \item Designed and implemented
           \link{Dex}{https://docs.google.com/document/d/1C-A6PGT6TynyaX4PXyExNMiGmJ2jL1UwV91Kyx11gOI/edit?usp=sharing}
-          --- efficient index for code completion
-          based on Russ Cox
-          \link{design}{https://swtch.com/~rsc/regexp/regexp4.html} of Google
-          Code Search.
+          --- search index for efficient code completion.
         \item Replaced previous index implementation and gained
-          \textbf{15x-60x performance boost} while providing more features such
-          as advanced filtering for code completion-based symbol search.
-        \item Reduced code completion average latency from \SI{16}{\us} to
-          \SI{1.09}{\us} for LLVM codebase (3M Lines Of Code) and from
-          \SI{119}{\us} to \SI{1.9}{\us} for Chromium codebase (16M LOC).
+          \textbf{15x-60x performance boost} while offering more features.
+        \item Reduced average code completion latency from \SI{16}{\ms} to
+          \SI{1.09}{\ms} for LLVM codebase (3M Lines Of Code) and from
+          \SI{119}{\ms} to \SI{1.9}{\ms} for Chromium codebase (16M LOC).
         \item Implemented Variable length Byte (VByte) compression algorithm
-          and reduced memory overhead by 60\% with insignificant loss of speed
-          and no precision loss.
-        \item Identified performance bottlenecks in commonly used LLVM YAML
-          serializer and made it 3 times faster.
+	  and reduced memory overhead by 60\% with no performance or precision
+	  losses.
+        \item Identified performance bottlenecks in LLVM infrastructure and made
+	  commonly used serializer 3 times faster.
       \end{cvitems}
     }
 
@@ -95,19 +92,18 @@
     {Jun 2016 - Sep 2016}
     {
       \begin{cvitems}
-        \item Elevated performance of
+        \item Elevated the performance of
           \link{Clang-Rename}{https://clang.llvm.org/extra/clang-rename.html},
           Clang-based tool that can perform efficient renaming actions in
           large-scale projects such as renaming classes, functions, variables,
           arguments, namespaces etc.
-        \item Fixed inconsistent renaming bugs, added support for template
-          classes, introduced new functionality and gained users for
-          Clang-Rename.
+        \item Fixed renaming bugs, added support for template classes,
+	  introduced new functionality and gained users for Clang-Rename.
         \item Built Vim and Emacs plugins for Clang-Rename tool.
         \item Designed and prototyped
           \link{Clang-Refactor}{https://docs.google.com/document/d/1w9IkR0_Gqmd5w4CZ2t_ZDZrNLYVirQPyMS41533HQZE/edit?usp=sharing},
           which later transformed into \link{Clang's Refactoring
-          Engine}{https://clang.llvm.org/docs/RefactoringEngine.html}
+          Engine}{https://clang.llvm.org/docs/RefactoringEngine.html}.
         \item Started a discussion about building Language Server Protocol
           implementation which later resulted in clangd creation and became the
           main focus of the team.
