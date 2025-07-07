@@ -1,0 +1,32 @@
+{
+  "name": "Awesome-CV",
+  "image": "texlive/texlive:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+
+  // Fix the ownership issue
+  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "James-Yu.latex-workshop"
+      ],
+      "settings": {
+        // Minimal LaTeX settings
+        "latex-workshop.latex.defaultRecipe": "latexmk (xelatex)",
+        "latex-workshop.view.pdf.viewer": "tab",
+        "files.exclude": {
+          "**/*.aux": true,
+          "**/*.fdb_latexmk": true,
+          "**/*.fls": true,
+          "**/*.log": true,
+          "**/*.out": true,
+          "**/*.synctex.gz": true
+        }
+      }
+    }
+  }
+}

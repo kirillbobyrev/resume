@@ -1,5 +1,5 @@
-% !TEX TS-program = tectonic
-% !TEX encoding = UTF-8 Unicode
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
 % Awesome CV LaTeX Template for CV/Resume
 %
 % This template has been downloaded from:
@@ -14,65 +14,74 @@
 %
 
 %-------------------------------------------------------------------------------
-% CONFIGURATION
+% CONFIGURATIONS
 %-------------------------------------------------------------------------------
-
+% A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
-\newcommand{\link}[2]{\href{#2}{\textcolor{yinmn}{\textbf{#1}}}}
+% Configure page margins with geometry
+\geometry{left=1cm, top=.5cm, right=1cm, bottom=.5cm, footskip=.5cm}
 
-\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+% Highlight colors
+\colorlet{awesome}{awesome-red}
+% \definecolor{awesome}{HTML}{D65D0E}
+% \definecolor{darktext}{HTML}{3C3836}
+% \definecolor{text}{HTML}{504945}
+% \definecolor{graytext}{HTML}{7C6F64}
+% \definecolor{lighttext}{HTML}{928374}
+% \definecolor{sectiondivider}{HTML}{D5C4A1}
 
-\usepackage{siunitx}
-
-\fontdir[fonts/]
-
-\definecolor{yinmn}{HTML}{2E5090}
-\definecolor{imperial-red}{HTML}{ED2939}
-\colorlet{awesome}{imperial-red}
-
+% Set false if you don't want to highlight section with awesome color
 \setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
 \name{Kirill}{Bobyrev}
-\position{Software Engineer}
-\address{San Jose, California, USA}
+\position{Machine Learning Engineer{\enskip\cdotp\enskip}Software Engineer}
+\address{San Jose, CA, USA}
 
+\mobile{(+1) 650-772-8428}
+\email{kirillbobyrev@gmail.com}
 \homepage{kirillbobyrev.com}
 \github{kirillbobyrev}
 \linkedin{kirillbobyrev}
-\mobile{+16507728428}
-\email{kirillbobyrev@gmail.com}
-\twitter{kirillbobyrev}
-% \extrainfo{extra information}
+\x{kirillbobyrev}
+% \googlescholar{googlescholar-id}{name-to-display}
 
 %-------------------------------------------------------------------------------
 \begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
 \makecvheader[C]
 
+% Print the footer with 3 arguments(<left>, <center>, <right>)
 \makecvfooter
-  {}
+  {\today}
   {Kirill Bobyrev~~~·~~~Résumé}
-  {\thepage ~~~ / ~~~ \pageref*{LastPage}}
+  {\thepage}
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify
-%   content
+%	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
 \input{content/summary.tex}
-\input{content/experience.tex}
-\input{content/talks_and_publications.tex}
-\input{content/extracurricular.tex}
-\input{content/skills.tex}
-\input{content/education.tex}
+% \input{resume/experience.tex}
+% \input{resume/honors.tex}
+% \input{resume/certificates.tex}
+% \input{resume/presentation.tex}
+% \input{resume/writing.tex}
+% \input{resume/committees.tex}
+% \input{resume/education.tex}
+% \input{resume/extracurricular.tex}
+
+%-------------------------------------------------------------------------------
 
 \end{document}
-%-------------------------------------------------------------------------------
