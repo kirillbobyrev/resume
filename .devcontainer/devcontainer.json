@@ -1,32 +1,9 @@
 {
-  "name": "Awesome-CV",
-  "image": "texlive/texlive:latest",
+  "name": "LaTex CV",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-
-  // Fix the ownership issue
-  "postCreateCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
-
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "James-Yu.latex-workshop"
-      ],
-      "settings": {
-        // Minimal LaTeX settings
-        "latex-workshop.latex.defaultRecipe": "latexmk (xelatex)",
-        "latex-workshop.view.pdf.viewer": "tab",
-        "files.exclude": {
-          "**/*.aux": true,
-          "**/*.fdb_latexmk": true,
-          "**/*.fls": true,
-          "**/*.log": true,
-          "**/*.out": true,
-          "**/*.synctex.gz": true
-        }
-      }
-    }
-  }
+  "postCreateCommand": "apt-get update && apt-get install -y git texlive-xetex texlive-fonts-extra latexmk texlive-bibtex-extra texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-science"
 }
