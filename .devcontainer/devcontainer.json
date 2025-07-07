@@ -5,5 +5,5 @@
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "apt-get update && apt-get install -y git texlive-xetex texlive-fonts-extra latexmk texlive-bibtex-extra texlive-extra-utils texlive-font-utils texlive-fonts-recommended texlive-latex-base texlive-latex-extra texlive-science"
+  "postCreateCommand": "apt-get update && apt-get install -y git texlive-xetex texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra latexmk fonts-font-awesome"
 }
