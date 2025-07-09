@@ -1,9 +1,9 @@
 {
-  "name": "LaTex CV",
+  "name": "LaTeX CV",
   "image": "mcr.microsoft.com/devcontainers/base:debian",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-  "postCreateCommand": "apt-get update && apt-get install -y git texlive-xetex texlive-fonts-extra texlive-fonts-recommended texlive-latex-base texlive-latex-extra latexmk fonts-font-awesome"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y texlive-full"
 }

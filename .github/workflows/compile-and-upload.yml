@@ -7,9 +7,24 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - uses: wtfjoke/setup-tectonic@v3
+      - name: Cache LaTeX packages
+        uses: actions/cache@v4
+        id: cache-latex
+        with:
+          path: |
+            /usr/share/texlive
+            /usr/share/texmf
+            /var/lib/texmf
+            /usr/bin/latexmk
+            /usr/bin/xelatex
+          key: latex-packages-${{ runner.os }}-v1
+      - name: Install LaTeX
+        if: steps.cache-latex.outputs.cache-hit != 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-latex-extra latexmk
       - name: Compile resume
-        run: tectonic resume.tex
+        run: latexmk -xelatex -interaction=nonstopmode -halt-on-error resume.tex
       - name: Rename output file
         run: mv resume.pdf Kirill-Bobyrev-Resume.pdf
       - name: Compute release info
