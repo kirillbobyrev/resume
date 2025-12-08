@@ -139,10 +139,10 @@
 % Section command
 %-------------------------------------------------------------------------------
 \newcommand{\cvsection}[1]{%
-  \vspace{0.3em}
-  {\Large\bfseries\color{sectioncolor}#1}%
+  \vspace{0.3em}%
+  {\Large\bfseries\color{sectioncolor}#1\par}%
   \vspace{0.05em}%
-  \par\noindent{\normalfont\color{sectioncolor}\rule{\textwidth}{0.8pt}}%
+  \par\noindent\color{sectioncolor}\rule{\textwidth}{0.8pt}%
   \vspace{0.15em}%
 }
 
