@@ -144,6 +144,9 @@
   \vspace{0.3em}
 }
 
+% Override default \section to use cvsection styling
+\renewcommand{\section}[1]{\cvsection{#1}}
+
 %-------------------------------------------------------------------------------
 % Paragraph environment
 %-------------------------------------------------------------------------------

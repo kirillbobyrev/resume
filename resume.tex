@@ -1,4 +1,4 @@
-%!TEX TS-program = lualatex
+%!TEX program = lualatex
 %!TEX encoding = UTF-8 Unicode
 % Simple custom resume template
 %
@@ -53,7 +53,16 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 
-\input{content/summary.tex}
+\cvsection{Experience}
+
+\begin{cvparagraph}
+This is something about my experience.
+\end{cvparagraph}
+
+\cvsection{Education}
+
+\cventry{Bachelor degree in Mathematics and Physics}{Moscow Institute of Physics and Technology}{}{July 2019}{}
+
 % \input{resume/experience.tex}
 % \input{resume/honors.tex}
 % \input{resume/certificates.tex}
