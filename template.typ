@@ -8,15 +8,6 @@
 #let link-color = rgb("#2C3E50")
 #let subtle-gray = rgb("#555555")
 
-// Helper function to build contact links
-#let contact-link(icon, url, text, show-separator) = {
-  if text != "" [
-    #if show-separator [ | ]
-    #icon #link(url)[#text]
-  ]
-}
-
-// Main resume function
 #let resume(
   name: "",
   position: "",
@@ -29,10 +20,8 @@
   twitter: "",
   body
 ) = {
-  // Set document properties
   set document(author: name, title: name + " - Resume")
   
-  // Page setup
   set page(
     paper: "a4",
     margin: (left: 1cm, right: 1cm, top: 0.5cm, bottom: 0.5cm),
@@ -49,7 +38,6 @@
     ]
   )
   
-  // Typography settings - using Roboto
   set text(
     font: ("Roboto", "DejaVu Sans"),
     size: 11pt,
@@ -62,13 +50,11 @@
     leading: 0.65em,
   )
   
-  // Link styling
   show link: it => {
     set text(fill: link-color)
     it
   }
   
-  // Header with name and contact info
   align(center)[
     #block(above: 0pt, below: 0pt)[
       #text(
@@ -79,7 +65,7 @@
       )
     ]
     
-    #v(0.3em)
+    #v(0.5em)
     
     #text(
       size: 14pt,
@@ -116,7 +102,6 @@
   body
 }
 
-// Section heading - tighter spacing
 #let section(title) = {
   v(0.2em)
   block[
@@ -132,7 +117,6 @@
   v(0.1em)
 }
 
-// Entry for experience/education - tighter spacing
 #let entry(
   title: "",
   organization: "",
@@ -171,7 +155,6 @@
   v(0.2em)
 }
 
-// Skills entry
 #let skill(category: "", items: "") = {
   grid(
     columns: (20%, 5%, 75%),
