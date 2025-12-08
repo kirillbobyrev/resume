@@ -105,15 +105,9 @@
         (icon: "💻", url: "https://github.com/" + github, text: github),
         (icon: "💼", url: "https://www.linkedin.com/in/" + linkedin, text: linkedin),
         (icon: "𝕏", url: "https://x.com/" + twitter, text: twitter),
-      )
-      #let has-prev = false
-      #for item in items [
-        #if item.text != "" [
-          #if has-prev [ | ]
-          #item.icon #link(item.url)[#item.text]
-          #let has-prev = true
-        ]
-      ]
+      ).filter(item => item.text != "")
+      
+      #items.map(item => [#item.icon #link(item.url)[#item.text]]).join([ | ])
     ]
   ]
   
