@@ -6,7 +6,7 @@
 %
 % Requirements:
 % - LuaLaTeX or XeLaTeX for font support (use: lualatex or xelatex)
-% - Source Sans Pro font (included in texlive-fonts-extra package)
+% - Roboto font (included in fonts-roboto package)
 % - FontAwesome 5 (included in texlive-fonts-extra package)
 
 \ProvidesClass{simple-resume}[2024/12/08 v1.0 Simple Resume Class]
@@ -22,6 +22,8 @@
 \RequirePackage{xcolor}            % Colors
 \RequirePackage{fontspec}          % Font management
 \RequirePackage{fontawesome5}      % Icons
+% FontAwesome 6 compatibility: Map FA6 X icon to FA5 Twitter icon
+\let\faXTwitter\faTwitter
 \RequirePackage{hyperref}          % Hyperlinks
 \RequirePackage{parskip}           % Paragraph spacing
 \RequirePackage{fancyhdr}          % Headers and footers
@@ -39,10 +41,10 @@
 % Font configuration
 %-------------------------------------------------------------------------------
 \defaultfontfeatures{Ligatures=TeX}
-\setmainfont{Source Sans Pro}[
+\setmainfont{Roboto}[
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
-  BoldFont=*-Semibold,
+  BoldFont=*-Medium,
 ]
 
 %-------------------------------------------------------------------------------
@@ -118,7 +120,7 @@
       \acvHeaderSocialSep
       \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\ \@linkedin}
       \acvHeaderSocialSep
-      \href{https://x.com/\@x}{\faTwitter\ \@x}
+      \href{https://x.com/\@x}{\faXTwitter\ \@x}
     }
   \end{center}
   \vspace{0.6em}
@@ -138,10 +140,10 @@
 %-------------------------------------------------------------------------------
 \newcommand{\cvsection}[1]{%
   \vspace{0.3em}
-  {\Large\bfseries\color{sectioncolor}#1}
-  \vspace{0.1em}
-  \par\noindent{\color{sectioncolor}\rule{\textwidth}{0.8pt}}
-  \vspace{0.2em}
+  {\Large\bfseries\color{sectioncolor}#1}%
+  \vspace{0.05em}%
+  \par\noindent{\normalfont\color{sectioncolor}\rule{\textwidth}{0.8pt}}%
+  \vspace{0.15em}%
 }
 
 % Override default \section to use cvsection styling
