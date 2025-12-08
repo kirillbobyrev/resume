@@ -31,9 +31,9 @@
 % Color definitions
 %-------------------------------------------------------------------------------
 \definecolor{headercolor}{HTML}{2C3E50}
-\definecolor{sectioncolor}{HTML}{E74C3C}
+\definecolor{sectioncolor}{HTML}{C0504D}
 \definecolor{textcolor}{HTML}{2C3E50}
-\definecolor{linkcolor}{HTML}{3498DB}
+\definecolor{linkcolor}{HTML}{2C3E50}
 
 %-------------------------------------------------------------------------------
 % Font configuration
@@ -42,7 +42,8 @@
 \setmainfont{Source Sans Pro}[
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
-  BoldFont=*-Bold,
+  BoldFont=*-Semibold,
+  Scale=1.0,
 ]
 
 %-------------------------------------------------------------------------------
@@ -51,7 +52,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \renewcommand{\headrulewidth}{0pt}
-\setlength{\parskip}{0.5em}
+\setlength{\parskip}{0.4em}
 
 %-------------------------------------------------------------------------------
 % Hyperlink setup
@@ -99,13 +100,13 @@
 \newcommand*{\makecvheader}[1][C]{%
   \begin{center}
     {\Huge\bfseries\color{headercolor}\@firstname\ \@lastname}
-    \vspace{0.3em}
-    
-    {\large\color{textcolor}\@position}
     \vspace{0.2em}
     
+    {\large\color{textcolor}\@position}
+    \vspace{0.15em}
+    
     {\color{textcolor}\@address}
-    \vspace{0.3em}
+    \vspace{0.25em}
     
     {\small\color{textcolor}
       \href{tel:\@mobile}{\faMobile\ \@mobile}
@@ -121,7 +122,7 @@
       \href{https://x.com/\@x}{\faTwitter\ \@x}
     }
   \end{center}
-  \vspace{1em}
+  \vspace{0.6em}
 }
 
 %-------------------------------------------------------------------------------
@@ -137,11 +138,11 @@
 % Section command
 %-------------------------------------------------------------------------------
 \newcommand{\cvsection}[1]{%
-  \vspace{0.5em}
-  {\Large\bfseries\color{sectioncolor}#1}
-  \vspace{0.2em}
-  \par\noindent{\color{sectioncolor}\rule{\textwidth}{0.8pt}}
   \vspace{0.3em}
+  {\Large\bfseries\color{sectioncolor}#1}
+  \vspace{0.1em}
+  \par\noindent{\color{sectioncolor}\rule{\textwidth}{0.8pt}}
+  \vspace{0.2em}
 }
 
 % Override default \section to use cvsection styling
@@ -151,11 +152,11 @@
 % Paragraph environment
 %-------------------------------------------------------------------------------
 \newenvironment{cvparagraph}{%
-  \vspace{0.2em}
+  \vspace{0.1em}
   \color{textcolor}
 }{%
   \par
-  \vspace{0.5em}
+  \vspace{0.3em}
 }
 
 %-------------------------------------------------------------------------------
