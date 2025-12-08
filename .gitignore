@@ -329,4 +329,4 @@ TSWLatexianTemp*
 *.pdf
 
 # Tectonic temporary file.
-__latexindent_temp.tex
+__latexindent_temp.texscreenshot*.png
