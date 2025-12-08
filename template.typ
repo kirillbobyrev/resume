@@ -8,6 +8,14 @@
 #let link-color = rgb("#2C3E50")
 #let subtle-gray = rgb("#555555")
 
+// Helper function to build contact links
+#let contact-link(icon, url, text, show-separator) = {
+  if text != "" [
+    #if show-separator [ | ]
+    #icon #link(url)[#text]
+  ]
+}
+
 // Main resume function
 #let resume(
   name: "",
@@ -41,9 +49,9 @@
     ]
   )
   
-  // Typography settings
+  // Typography settings - using Roboto
   set text(
-    font: ("Lato", "DejaVu Sans"),
+    font: ("Roboto", "DejaVu Sans"),
     size: 11pt,
     fill: text-color,
     fallback: true
@@ -54,7 +62,7 @@
     leading: 0.65em,
   )
   
-  // Link styling - only underline, don't change color (we'll handle color per-link)
+  // Link styling
   show link: it => {
     set text(fill: link-color)
     it
@@ -90,40 +98,33 @@
     #v(0.3em)
     
     #text(size: 9pt, fill: text-color)[
-      #if phone != "" [
-        📱 #link("tel:" + phone)[#phone]
-      ]
-      #if phone != "" and email != "" [ | ]
-      #if email != "" [
-        ✉ #link("mailto:" + email)[#email]
-      ]
-      #if (phone != "" or email != "") and website != "" [ | ]
-      #if website != "" [
-        🌐 #link("https://" + website)[#website]
-      ]
-      #if website != "" and github != "" [ | ]
-      #if github != "" [
-        💻 #link("https://github.com/" + github)[#github]
-      ]
-      #if github != "" and linkedin != "" [ | ]
-      #if linkedin != "" [
-        💼 #link("https://www.linkedin.com/in/" + linkedin)[#linkedin]
-      ]
-      #if linkedin != "" and twitter != "" [ | ]
-      #if twitter != "" [
-        𝕏 #link("https://x.com/" + twitter)[#twitter]
+      #let items = (
+        (icon: "📱", url: "tel:" + phone, text: phone),
+        (icon: "✉", url: "mailto:" + email, text: email),
+        (icon: "🌐", url: "https://" + website, text: website),
+        (icon: "💻", url: "https://github.com/" + github, text: github),
+        (icon: "💼", url: "https://www.linkedin.com/in/" + linkedin, text: linkedin),
+        (icon: "𝕏", url: "https://x.com/" + twitter, text: twitter),
+      )
+      #let has-prev = false
+      #for item in items [
+        #if item.text != "" [
+          #if has-prev [ | ]
+          #item.icon #link(item.url)[#item.text]
+          #let has-prev = true
+        ]
       ]
     ]
   ]
   
-  v(0.6em)
+  v(0.4em)
   
   body
 }
 
-// Section heading
+// Section heading - tighter spacing
 #let section(title) = {
-  v(0.3em)
+  v(0.2em)
   block[
     #text(
       size: 16pt,
@@ -134,10 +135,10 @@
     #v(0.05em)
     #line(length: 100%, stroke: 0.8pt + section-color)
   ]
-  v(0.15em)
+  v(0.1em)
 }
 
-// Entry for experience/education
+// Entry for experience/education - tighter spacing
 #let entry(
   title: "",
   organization: "",
@@ -145,7 +146,7 @@
   date: "",
   description: none
 ) = {
-  v(0.3em)
+  v(0.2em)
   grid(
     columns: (1fr, auto),
     gutter: 1em,
@@ -170,10 +171,10 @@
     ]
   )
   if description != none [
-    #v(0.2em)
+    #v(0.15em)
     #description
   ]
-  v(0.3em)
+  v(0.2em)
 }
 
 // Skills entry
