@@ -330,3 +330,10 @@ TSWLatexianTemp*
 
 # Tectonic temporary file.
 __latexindent_temp.tex
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
