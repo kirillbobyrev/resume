@@ -43,7 +43,6 @@
   UprightFont=*-Regular,
   ItalicFont=*-Italic,
   BoldFont=*-Semibold,
-  Scale=1.0,
 ]
 
 %-------------------------------------------------------------------------------
