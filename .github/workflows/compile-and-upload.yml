@@ -6,35 +6,27 @@ on:
   pull_request:
 jobs:
   compile:
-    name: Compile PDF via LaTeX
+    name: Compile PDF via Typst
     runs-on: ubuntu-latest
     permissions:
       contents: read
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-      - name: Cache LaTeX packages
-        uses: actions/cache@v4
-        id: cache-latex
-        with:
-          path: |
-            /usr/share/texlive
-            /usr/share/texmf
-            /var/lib/texmf
-            /usr/bin/latexmk
-            /usr/bin/lualatex
-          key: latex-packages-${{ runner.os }}-v2
-      - name: Install LaTeX
-        if: steps.cache-latex.outputs.cache-hit != 'true'
+      - name: Install Roboto fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y texlive-luatex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra latexmk
+          sudo apt-get install -y fonts-roboto
+      - name: Install Typst
+        run: |
+          curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
+          tar -xf typst.tar.xz
+          sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
+          rm -rf typst*
       - name: Compile resume
-        run: latexmk -lualatex -interaction=nonstopmode -halt-on-error resume.tex
+        run: typst compile resume.typ
       - name: Rename output file
         run: mv resume.pdf Kirill-Bobyrev-Resume.pdf
-      # Upload artifact for the upload job to consume
-      # Artifacts are scoped to the workflow run, so concurrent runs won't interfere
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
