@@ -3,6 +3,11 @@
 %
 % Author: Kirill Bobyrev
 % License: MIT
+%
+% Requirements:
+% - LuaLaTeX or XeLaTeX for font support (use: lualatex or xelatex)
+% - Source Sans Pro font (included in texlive-fonts-extra package)
+% - FontAwesome 5 (included in texlive-fonts-extra package)
 
 \ProvidesClass{simple-resume}[2024/12/08 v1.0 Simple Resume Class]
 \NeedsTeXFormat{LaTeX2e}
@@ -20,6 +25,7 @@
 \RequirePackage{hyperref}          % Hyperlinks
 \RequirePackage{parskip}           % Paragraph spacing
 \RequirePackage{fancyhdr}          % Headers and footers
+\RequirePackage{etoolbox}          % Programming tools
 
 %-------------------------------------------------------------------------------
 % Color definitions
@@ -164,11 +170,10 @@
     {\large\bfseries\color{headercolor}#2} & {\color{textcolor}#3} \\
     {\color{textcolor}\textit{#1}} & {\color{textcolor}#4} \\
   \end{tabular*}
-  \ifx&#5&%
-  \else
+  \ifstrempty{#5}{}{%
     \vspace{0.2em}
     {\color{textcolor}#5}
-  \fi
+  }%
   \vspace{0.3em}
 }
 
