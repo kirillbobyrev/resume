@@ -76,7 +76,8 @@
 \RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 \RequirePackage{fontawesome5}
-% Define FontAwesome 6 icons that are not available in FontAwesome 5
+% FontAwesome 6 compatibility: Map FA6-specific icons to their FA5 equivalents
+% This ensures the template works with TeX Live 2023 where fontawesome6 is not available
 \let\faXTwitter\faTwitter
 \let\faHouseChimney\faHome
 \let\faCakeCandles\faBirthdayCake
