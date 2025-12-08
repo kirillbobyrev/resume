@@ -54,10 +54,10 @@
     leading: 0.65em,
   )
   
-  // Link styling
+  // Link styling - only underline, don't change color (we'll handle color per-link)
   show link: it => {
     set text(fill: link-color)
-    underline(it)
+    it
   }
   
   // Header with name and contact info
@@ -71,7 +71,7 @@
       )
     ]
     
-    #v(0.2em)
+    #v(0.3em)
     
     #text(
       size: 14pt,
@@ -79,7 +79,7 @@
       position
     )
     
-    #v(0.15em)
+    #v(0.2em)
     
     #text(
       size: 11pt,
@@ -87,31 +87,31 @@
       address
     )
     
-    #v(0.25em)
+    #v(0.3em)
     
     #text(size: 9pt, fill: text-color)[
       #if phone != "" [
-        #link("tel:" + phone)[📱 #phone]
+        📱 #link("tel:" + phone)[#phone]
       ]
       #if phone != "" and email != "" [ | ]
       #if email != "" [
-        #link("mailto:" + email)[✉ #email]
+        ✉ #link("mailto:" + email)[#email]
       ]
       #if (phone != "" or email != "") and website != "" [ | ]
       #if website != "" [
-        #link("https://" + website)[🏠 #website]
+        🌐 #link("https://" + website)[#website]
       ]
       #if website != "" and github != "" [ | ]
       #if github != "" [
-        #link("https://github.com/" + github)[⚙ #github]
+        💻 #link("https://github.com/" + github)[#github]
       ]
       #if github != "" and linkedin != "" [ | ]
       #if linkedin != "" [
-        #link("https://www.linkedin.com/in/" + linkedin)[🔗 #linkedin]
+        💼 #link("https://www.linkedin.com/in/" + linkedin)[#linkedin]
       ]
       #if linkedin != "" and twitter != "" [ | ]
       #if twitter != "" [
-        #link("https://x.com/" + twitter)[🐦 #twitter]
+        𝕏 #link("https://x.com/" + twitter)[#twitter]
       ]
     ]
   ]
