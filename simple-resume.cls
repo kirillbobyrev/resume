@@ -22,7 +22,7 @@
 \RequirePackage{xcolor}            % Colors
 \RequirePackage{fontspec}          % Font management
 \RequirePackage{fontawesome5}      % Icons
-% FontAwesome 6 compatibility: Map FA6 X icon to FA5 Twitter icon
+% X icon compatibility: Create alias for X icon (maps to Twitter icon in FA5)
 \let\faXTwitter\faTwitter
 \RequirePackage{hyperref}          % Hyperlinks
 \RequirePackage{parskip}           % Paragraph spacing
