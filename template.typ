@@ -39,10 +39,9 @@
   )
   
   set text(
-    font: ("Roboto", "DejaVu Sans"),
+    font: "Roboto",
     size: 11pt,
     fill: text-color,
-    fallback: true
   )
   
   set par(
