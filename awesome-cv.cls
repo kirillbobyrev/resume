@@ -75,7 +75,13 @@
 % Needed to manage math fonts
 \RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
-\RequirePackage{fontawesome6}
+\RequirePackage{fontawesome5}
+% Define FontAwesome 6 icons that are not available in FontAwesome 5
+\let\faXTwitter\faTwitter
+\let\faHouseChimney\faHome
+\let\faCakeCandles\faBirthdayCake
+\let\faSquareGithub\faGithubSquare
+\let\faSquareXing\faXingSquare
 \RequirePackage{roboto}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
