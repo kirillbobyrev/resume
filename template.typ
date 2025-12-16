@@ -9,18 +9,10 @@
 #let subtle-color = rgb("#7F8C8D")
 
 // Section header with colored prefix
-#let section(title, prefix-len: 3) = {
+#let section(title) = {
   v(0.6em)
   block[
-    #text(size: 14pt, weight: "bold")[
-      #text(fill: accent-color)[#title.slice(0, calc.min(
-        prefix-len,
-        title.len(),
-      ))]#text(fill: header-color)[#title.slice(calc.min(
-        prefix-len,
-        title.len(),
-      ))]
-    ]
+    #text(size: 14pt, weight: "bold", fill: header-color)[#title]
     #h(0.3em)
     #box(width: 1fr, line(length: 100%, stroke: 0.5pt + luma(200)))
   ]
@@ -40,21 +32,9 @@
     columns: (1fr, auto),
     column-gutter: 1em,
     [
-      #text(weight: "bold", fill: header-color)[#organization]
-      #if location != "" [ #h(1fr) #text(
-          style: "italic",
-          fill: accent-color,
-        )[#location]]
-      #if title != "" [
-        #linebreak()
-        #text(
-          size: 9pt,
-          tracking: 0.05em,
-          fill: subtle-color,
-        )[#smallcaps[#title]]
-      ]
+      #text(weight: "bold", fill: header-color)[#organization]#if title != "" [#text(fill: subtle-color)[#h(0.5em)#title]]#if location != "" [#h(1fr)#text(fill: subtle-color)[#location]]
     ],
-    align(right, if date != "" { text(size: 9pt, fill: subtle-color)[#date] }),
+    align(right, if date != "" { text(fill: subtle-color)[#date] }),
   )
   if description != none {
     v(0.15em)
@@ -64,21 +44,9 @@
   v(0.2em)
 }
 
-// Skill entry
-#let skill(category, items) = {
-  grid(
-    columns: (22%, 78%),
-    column-gutter: 0.5em,
-    align(right, text(weight: "bold", fill: header-color)[#category]),
-    text(fill: text-color)[#items],
-  )
-  v(0.15em)
-}
-
 // Main resume template
 #let resume(
   name: "",
-  position: "",
   address: "",
   phone: "",
   email: "",
@@ -97,8 +65,6 @@
       set text(8pt, fill: subtle-color)
       set align(center)
       text[#datetime.today().display()]
-      h(1fr)
-      counter(page).display("1 / 1", both: true)
     },
   )
 
@@ -120,10 +86,9 @@
       (address, none, none),
       (phone, none, none),
       (email, "mailto:" + email, email),
-      (website, "https://" + website, "Website"),
+      (website, "https://" + website, website),
       (github, "https://github.com/" + github, "GitHub"),
       (linkedin, "https://www.linkedin.com/in/" + linkedin, "LinkedIn"),
-      (twitter, "https://x.com/" + twitter, "X"),
     )
     let render-contact(c) = if c.at(1) == none { c.at(0) } else {
       link(c.at(1), c.at(2))

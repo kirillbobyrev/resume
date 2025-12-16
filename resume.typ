@@ -2,7 +2,6 @@
 
 #show: resume.with(
   name: "Kirill Bobyrev",
-  position: "Software Engineer",
   address: "San Jose, CA",
   phone: "+1 650 772 8428",
   email: "kirillbobyrev@gmail.com",
@@ -51,46 +50,29 @@
 )
 
 #entry(
-  organization: "Google",
-  title: "Software Engineering Intern",
-  date: "Jul 2018 - Sep 2018",
+  organization: "Google / LLVM",
+  title: "Software Engineering Intern / Open Source maintainer and developer",
+  date: "Jun 2015 - Sep 2018",
   description: [
-    - Designed Dex, a search index achieving 15x-60x faster code completion (16ms → 1ms for 3M LOC codebase).
-    - Implemented VByte compression reducing memory usage by 60% with no performance loss.
-  ],
-)
-
-#entry(
-  organization: "Google",
-  title: "Software Engineering Intern",
-  date: "Jun 2016 - Sep 2016",
-  description: [
+    - Designed Dex, a search index achieving 15x-60x faster
+      code completion (16ms → 1ms for 3M lines of code codebase).
+    - Implemented VByte compression reducing memory usage by 60%
+      with no performance loss.
     - Improved Clang-Rename performance and added template class support.
-    - Prototyped Clang-Refactor, which became Clang's official Refactoring Engine.
-    - Initiated Language Server Protocol discussion that led to clangd creation.
+    - Prototyped Clang-Refactor, which became Clang's official
+      Refactoring Engine.
+    - Initiated Language Server Protocol discussion that led to clangd
+      creation.
+    - Implemented Code Clone Detection in Clang Static Analyzer,
+      detecting 400+ code duplicates across Git, Vim, and OpenSSL.
   ],
 )
 
-#entry(
-  organization: "Google Summer of Code",
-  title: "Open Source Developer",
-  date: "Jun 2015 - Sep 2015",
-  description: [
-    - Implemented Code Clone Detection in Clang Static Analyzer, detecting 400+ code duplicates across Git, Vim, and OpenSSL.
-  ],
-)
+#section("Technical focus")
 
-#section("Skills")
-
-#skill("Languages", "C++, Python, Rust, SQL")
-#skill(
-  "ML/AI",
-  "PyTorch, TensorFlow, Transformers, Diffusion Models, LLMs, TPU",
-)
-#skill(
-  "Systems",
-  "Distributed Systems, Compilers, Cloud Infrastructure (GCP), Linux",
-)
+- Diffusion
+- Scene Reconstruction, Novel View Synthesis
+- Systems programming and performance (compilers, ML stack)
 
 #section("Publications")
 
