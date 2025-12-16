@@ -96,7 +96,7 @@
     footer: context {
       set text(8pt, fill: subtle-color)
       set align(center)
-      smallcaps[#name · Résumé]
+      text[#datetime.today().display()]
       h(1fr)
       counter(page).display("1 / 1", both: true)
     },
@@ -128,7 +128,10 @@
     let render-contact(c) = if c.at(1) == none { c.at(0) } else {
       link(c.at(1), c.at(2))
     }
-    contacts.filter(c => c.at(0) != "").map(render-contact).join[#text)[|] ]
+    contacts
+      .filter(c => c.at(0) != "")
+      .map(render-contact)
+      .join[ #text(fill: luma(180))[|] ]
   }
 
   linebreak()
