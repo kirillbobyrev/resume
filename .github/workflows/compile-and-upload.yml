@@ -28,7 +28,7 @@ jobs:
       - name: Rename output file
         run: mv resume.pdf Kirill-Bobyrev-Resume.pdf
       - name: Upload artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: resume-pdf
           path: Kirill-Bobyrev-Resume.pdf
