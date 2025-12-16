@@ -68,7 +68,7 @@
     },
   )
 
-  set text(font: "Source Sans Pro", size: 10pt, fill: text-color)
+  set text(font: "Inter", size: 10pt, fill: text-color)
   set par(justify: true, leading: 0.6em)
   show link: it => text(fill: header-color, it)
 
