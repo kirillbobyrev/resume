@@ -20,12 +20,13 @@
     - Building Waymo's simulation platform for autonomous driving simulation,
       which enables training and testing the software in safety-critical scenarios
       and conditions.
-    - Developed and deployed Diffusion and Transformer-based models to generate
-      realistic pedestrian and vehicle appearance, improving simulation fidelity.
+    - I work on techniques from recent research papers (Diffusion, 3DGS,
+      Generative AI), optimizing performance, and ensuring scalability and
+      improved quality of pedestrian and vehicle appearance and behavior.
     - Migrated and maintained Neural Network inference from CPU to TPU,
       achieving 70x latency reduction.
-    - Designed distributed data processing pipelines running on thousands of
-      nodes to efficiently handle petabytes of simulation data.
+    - Built distributed data processing pipelines to efficiently handle
+      petabytes of simulation data.
   ],
 )
 
@@ -69,8 +70,8 @@
   title: "Software Engineering Intern / Open Source maintainer and developer",
   date: "Jun 2015 - Sep 2018",
   description: [
-    - Designed Dex, a search index achieving *15x-60x faster code completion*
-      (critical path, 16ms → 1ms for 3M lines of code codebase).
+    - Built Dex, a search index achieving *15x-60x faster code completion*
+      (16ms → 1ms for 3M LoC).
     - Implemented VByte compression reducing *memory usage by 60%*
       with no performance loss.
     - Improved
@@ -79,9 +80,9 @@
     - Prototyped
       #link("https://clang.llvm.org/docs/RefactoringEngine.html")[Clang-Refactor],
       which became Clang's official Refactoring Engine.
-    - Designed and implemented Code Clone Detection tooling, finding
+    - Designed and implemented Code Clone Detection tools, found
       #link("https://github.com/kirillbobyrev/code-clone-detection-llvm-devmtg15-poster?tab=readme-ov-file#similar-pieces-of-code-found-using-proposed-technique")[400+
-        code duplicates] across Git, Vim, and OpenSSL.
+      code duplicates] in Git, Vim, and OpenSSL.
   ],
 )
 
@@ -100,7 +101,7 @@
   description: [
     Discussing self-driving industry as an expert guest in the episode of the
     #link("https://libolibo.ru/zapuskzavtra")[most popular Tech podcast] in
-    Russian language.
+    Russian.
   ],
 )
 
@@ -134,8 +135,9 @@
   title: "Second Place Winner",
   date: "2025",
   description: [
-    Implemented efficient Prefix Scan algorithm in Mojo, received an award
-    from Chris Lattner, the CEO of Modular and LLVM creator.
+    Implemented
+    #link("https://github.com/kirillbobyrev/prefix-scan-mojo-agi-house")["efficient
+    Prefix Scan algorithm in Mojo"], received an award from Chris Lattner.
   ],
 )
 
@@ -144,8 +146,8 @@
   title: "Open Source Maintainer",
   date: "2015 - Present",
   description: [
-    Active maintainer of clangd and Clang-Tidy modules. Regularly featured in
-    LLVM Weekly, which covers important contributions.
+    Active maintainer of clangd and Clang-Tidy modules, regularly featured in
+    LLVM Weekly.
   ],
 )
 
