@@ -13,10 +13,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
-      - name: Install Roboto fonts
+      - name: Install Inter fonts
         run: |
           sudo apt-get update
-          sudo apt-get install -y fonts-roboto
+          sudo apt-get install -y fonts-inter
       - name: Install Typst
         run: |
           curl -fsSL https://github.com/typst/typst/releases/latest/download/typst-x86_64-unknown-linux-musl.tar.xz -o typst.tar.xz
