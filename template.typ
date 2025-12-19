@@ -1,14 +1,9 @@
-// Professional Typst resume template
-// Author: Kirill Bobyrev
-// License: MIT
-
 // Color scheme
 #let accent-color = rgb("#C0392B")
 #let header-color = rgb("#2C3E50")
 #let text-color = rgb("#333333")
 #let subtle-color = rgb("#7F8C8D")
 
-// Section header with colored prefix
 #let section(title) = {
   v(0.6em)
   block[
@@ -19,7 +14,6 @@
   v(0.4em)
 }
 
-// Generic entry component (works for jobs, education, talks, projects)
 #let entry(
   title: "",
   organization: "",
@@ -44,7 +38,6 @@
   v(0.2em)
 }
 
-// Main resume template
 #let resume(
   name: "",
   address: "",
@@ -53,7 +46,6 @@
   website: "",
   github: "",
   linkedin: "",
-  twitter: "",
   body,
 ) = {
   set document(author: name, title: name + " - Resume")
@@ -102,5 +94,6 @@
   linebreak()
 
   set align(left)
+  show link: underline
   body
 }
