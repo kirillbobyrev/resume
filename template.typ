@@ -4,14 +4,21 @@
 #let text-color = rgb("#333333")
 #let subtle-color = rgb("#7F8C8D")
 
+// Spacing
+#let section-gap-before = 0.6em
+#let section-gap-after = 0.4em
+#let entry-gap = 0.3em
+#let desc-gap = 0.15em
+#let entry-gap-after = 0.2em
+
 #let section(title) = {
-  v(0.6em)
+  v(section-gap-before)
   block[
     #text(size: 14pt, weight: "bold", fill: header-color)[#title]
     #h(0.3em)
-    #box(width: 1fr, line(length: 100%, stroke: 0.5pt + luma(200)))
+    #box(width: 1fr, line(length: 100%, stroke: 0.5pt + accent-color))
   ]
-  v(0.4em)
+  v(section-gap-after)
 }
 
 #let entry(
@@ -21,7 +28,7 @@
   date: "",
   description: none,
 ) = {
-  v(0.3em)
+  v(entry-gap)
   grid(
     columns: (1fr, auto),
     column-gutter: 1em,
@@ -31,11 +38,11 @@
     align(right, if date != "" { text(fill: subtle-color)[#date] }),
   )
   if description != none {
-    v(0.15em)
+    v(desc-gap)
     set text(size: 9.5pt)
     description
   }
-  v(0.2em)
+  v(entry-gap-after)
 }
 
 #let resume(
@@ -53,15 +60,11 @@
   set page(
     paper: "a4",
     margin: (left: 1.5cm, right: 1.5cm, top: 1cm, bottom: 1cm),
-    footer: context {
-      set text(8pt, fill: subtle-color)
-      set align(center)
-      text[#datetime.today().display()]
-    },
   )
 
   set text(font: "Inter", size: 10pt, fill: text-color)
   set par(justify: true, leading: 0.6em)
+  set list(marker: [•], indent: 0.4em, spacing: 0.5em)
   show link: it => text(fill: header-color, it)
 
   // Header
@@ -75,19 +78,16 @@
 
   {
     let contacts = (
-      (address, none, none),
-      (phone, none, none),
-      (email, "mailto:" + email, email),
-      (website, "https://" + website, website),
-      (github, "https://github.com/" + github, "GitHub"),
-      (linkedin, "https://www.linkedin.com/in/" + linkedin, "LinkedIn"),
+      (text: address),
+      (text: phone),
+      (text: email, url: "mailto:" + email),
+      (text: website, url: "https://" + website),
+      (text: "GitHub", url: "https://github.com/" + github),
+      (text: "LinkedIn", url: "https://www.linkedin.com/in/" + linkedin),
     )
-    let render-contact(c) = if c.at(1) == none { c.at(0) } else {
-      link(c.at(1), c.at(2))
-    }
     contacts
-      .filter(c => c.at(0) != "")
-      .map(render-contact)
+      .filter(c => c.text != "")
+      .map(c => if "url" in c { link(c.url, c.text) } else { c.text })
       .join[ #text(fill: luma(180))[|] ]
   }
 

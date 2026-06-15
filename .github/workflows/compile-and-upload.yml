@@ -24,7 +24,7 @@ jobs:
           sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
           rm -rf typst*
       - name: Compile resume
-        run: typst compile resume.typ
+        run: typst compile --pdf-standard a-2b resume.typ
       - name: Rename output file
         run: mv resume.pdf Kirill-Bobyrev-Resume.pdf
       - name: Upload artifact

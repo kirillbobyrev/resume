@@ -20,9 +20,9 @@
     - Building Waymo's simulation platform for autonomous driving simulation,
       which enables training and testing the software in safety-critical scenarios
       and conditions.
-    - I work on techniques from recent research papers (Diffusion, 3DGS,
-      Generative AI), optimizing performance, and ensuring scalability and
-      improved quality of pedestrian and vehicle appearance and behavior.
+    - Apply techniques from recent research papers (Diffusion, 3DGS,
+      Generative AI) to optimize performance and improve the quality of
+      pedestrian and vehicle appearance and behavior.
     - Migrated and maintained Neural Network inference from CPU to TPU,
       achieving 70x latency reduction.
     - Built distributed data processing pipelines to efficiently handle
@@ -38,7 +38,7 @@
     - Led development of multiple
       #link("https://clangd.llvm.org/features")[clangd] (C++ Language Server
       Protocol implementation) features (code completion, renaming, refactoring
-      support).  clangd is used by *millions of Open Source developers* in IDEs
+      support). clangd is used by *millions of Open Source developers* in IDEs
       like VSCode (2.3 million downloads), CLion, and all of Google's internal
       users (50k+ developers).
     - Designed and implemented Include Cleaner for detecting unused and missing
