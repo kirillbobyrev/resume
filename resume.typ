@@ -160,23 +160,6 @@
   ],
 )
 
-#section("Skills")
-
-#entry(
-  organization: "Languages",
-  description: [C++, Python, Mojo],
-)
-
-#entry(
-  organization: "ML / AI",
-  description: [PyTorch, JAX, TPU inference, Diffusion models, 3D Gaussian Splatting, Generative AI],
-)
-
-#entry(
-  organization: "Systems",
-  description: [Distributed data pipelines, LLVM/Clang compiler infrastructure, Language Server Protocol (LSP)],
-)
-
 #section("Education")
 
 #entry(
