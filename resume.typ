@@ -17,16 +17,17 @@
   title: "Software Engineer",
   date: "Jun 2022 - Present",
   description: [
-    - Building Waymo's simulation platform for autonomous driving simulation,
-      which enables training and testing the software in safety-critical scenarios
-      and conditions.
-    - Apply techniques from recent research papers (Diffusion, 3DGS,
-      Generative AI) to optimize performance and improve the quality of
-      pedestrian and vehicle appearance and behavior.
-    - Migrated and maintained Neural Network inference from CPU to TPU,
-      achieving 70x latency reduction.
-    - Built distributed data processing pipelines to efficiently handle
-      petabytes of simulation data.
+    - Core engineer on Waymo's simulation platform, enabling training and
+      validation of the full self-driving software stack in safety-critical
+      scenarios at scale.
+    - Applied Diffusion, 3DGS, and Generative AI techniques to improve
+      photorealistic rendering and behavioral fidelity of simulated agents,
+      directly improving training data quality.
+    - Migrated Neural Network inference from CPU to TPU, achieving *70x
+      latency reduction* (16ms → under 1ms), enabling real-time simulation
+      feedback loops.
+    - Architected distributed data processing pipelines handling petabytes
+      of simulation data, accelerating ML training iterations.
   ],
 )
 
@@ -99,9 +100,9 @@
   ],
   date: "2025",
   description: [
-    Discussing self-driving industry as an expert guest in the episode of the
-    #link("https://libolibo.ru/zapuskzavtra")[most popular Tech podcast] in
-    Russian.
+    Invited as an industry expert to discuss the future of autonomous vehicles
+    on the #link("https://libolibo.ru/zapuskzavtra")[most popular Tech podcast]
+    in Russian (1M+ listeners).
   ],
 )
 
@@ -113,6 +114,10 @@
       Symbol Index for clangd"]
   ],
   date: "2018",
+  description: [
+    Presented a novel fuzzy-search index for C++ symbols achieving 15x-60x
+    speedup; adopted as clangd's primary completion backend.
+  ],
 )
 
 #entry(
@@ -123,6 +128,10 @@
       Clone Detection in Clang Static Analyzer"]
   ],
   date: "2015",
+  description: [
+    Presented a static analysis technique for detecting code duplicates;
+    discovered 400+ clones across Git, Vim, and OpenSSL.
+  ],
 )
 
 #section("Projects")
@@ -149,6 +158,23 @@
     Active maintainer of clangd and Clang-Tidy modules, regularly featured in
     LLVM Weekly.
   ],
+)
+
+#section("Skills")
+
+#entry(
+  organization: "Languages",
+  description: [C++, Python, Mojo],
+)
+
+#entry(
+  organization: "ML / AI",
+  description: [PyTorch, JAX, TPU inference, Diffusion models, 3D Gaussian Splatting, Generative AI],
+)
+
+#entry(
+  organization: "Systems",
+  description: [Distributed data pipelines, LLVM/Clang compiler infrastructure, Language Server Protocol (LSP)],
 )
 
 #section("Education")
