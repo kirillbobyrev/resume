@@ -17,16 +17,16 @@
   title: "Software Engineer",
   date: "Jun 2022 - Present",
   description: [
-    - Building Waymo's simulation platform for autonomous driving simulation,
-      which enables training and testing the software in safety-critical scenarios
-      and conditions.
-    - Apply techniques from recent research papers (Diffusion, 3DGS,
-      Generative AI) to optimize performance and improve the quality of
-      pedestrian and vehicle appearance and behavior.
-    - Migrated and maintained Neural Network inference from CPU to TPU,
-      achieving 70x latency reduction.
-    - Built distributed data processing pipelines to efficiently handle
-      petabytes of simulation data.
+    - Core engineer on Waymo's simulation platform, enabling training and
+      validation of the full self-driving software stack in safety-critical
+      scenarios at scale.
+    - Applied Diffusion, 3DGS, and Generative AI techniques to improve
+      photorealistic rendering and behavioral fidelity of simulated agents,
+      directly improving training data quality.
+    - Migrated Neural Network inference from CPU to TPU, achieving *70x
+      latency reduction*.
+    - Architected distributed data processing pipelines to handle petabytes
+      of simulation data.
   ],
 )
 
@@ -99,9 +99,9 @@
   ],
   date: "2025",
   description: [
-    Discussing self-driving industry as an expert guest in the episode of the
+    Invited as an industry expert on the
     #link("https://libolibo.ru/zapuskzavtra")[most popular Tech podcast] in
-    Russian.
+    Russian (1M+ listeners).
   ],
 )
 
