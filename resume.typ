@@ -15,7 +15,7 @@
 #entry(
   organization: "Waymo",
   title: "Software Engineer",
-  date: "Jun 2022 - Present",
+  date: "Jun 2022 – Present",
   description: [
     - Core engineer on Waymo's simulation platform, enabling training and
       validation of the full self-driving software stack in safety-critical
@@ -33,7 +33,7 @@
 #entry(
   organization: "Google",
   title: "Software Engineer",
-  date: "Nov 2019 - Jun 2022",
+  date: "Nov 2019 – Jun 2022",
   description: [
     - Led development of multiple
       #link("https://clangd.llvm.org/features")[clangd] (C++ Language Server
@@ -42,11 +42,11 @@
       like VSCode (2.3 million downloads), CLion, and all of Google's internal
       users (50k+ developers).
     - Designed and implemented Include Cleaner for detecting unused and missing
-      C++ headers. This is notoriously difficult problem in C++ and has been a
-      long-standing issue in the C++ community. Solving it has helped Google
+      C++ headers. This is a notoriously difficult problem in C++ and has been
+      a long-standing issue in the C++ community. Solving it has helped Google
       save *millions of dollars* by significantly reducing the build times.
     - Built and deployed
-      #link("https://linux.clangd-index.chromium.org/")[clangd Remote Index] on
+      #link("https://linux.clangd-index.chromium.org/")[clangd Remote Index]
       for Chrome developers, handling 1.5M+ weekly requests with zero startup
       latency and accelerating the development cycle for 1000+ developers.
     - Drove product direction through user research, roadmap planning, and
@@ -57,7 +57,7 @@
 #entry(
   organization: "Handl (YC-backed)",
   title: "Data Scientist",
-  date: "Feb 2019 - Jun 2019",
+  date: "Feb 2019 – Jun 2019",
   description: [
     - Secured contract with Mercedes-AMG by translating business requirements into ML solutions.
     - Built Deep Learning models for image segmentation, video classification,
@@ -68,7 +68,7 @@
 #entry(
   organization: "Google / LLVM",
   title: "Software Engineering Intern / Open Source maintainer and developer",
-  date: "Jun 2015 - Sep 2018",
+  date: "Jun 2015 – Sep 2018",
   description: [
     - Built Dex, a search index achieving *15x-60x faster code completion*
       (16ms → 1ms for 3M LoC).
@@ -144,7 +144,7 @@
 #entry(
   organization: "LLVM/Clang",
   title: "Open Source Maintainer",
-  date: "2015 - Present",
+  date: "2015 – Present",
   description: [
     Active maintainer of clangd and Clang-Tidy modules, regularly featured in
     LLVM Weekly.
@@ -156,5 +156,5 @@
 #entry(
   organization: "Moscow Institute of Physics and Technology",
   title: "B.S. in Mathematics and Physics",
-  date: "Sep 2014 - Jul 2019",
+  date: "Sep 2014 – Jul 2019",
 )

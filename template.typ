@@ -69,7 +69,7 @@
 
   // Header
   set align(center)
-  text(size: 32pt, fill: header-color)[
+  text(size: 27pt, fill: header-color)[
     #text(weight: "light")[#name.split(" ").first()]
     #text(weight: "bold")[#name.split(" ").slice(1).join(" ")]
   ]
